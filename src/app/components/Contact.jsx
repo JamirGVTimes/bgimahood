@@ -135,7 +135,7 @@ export function Contact() {
                   className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-xl p-4 hover:border-white/20 transition-all"
                 >
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                    className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0"
                     style={{ background: `${info.color}22` }}
                   >
                     <span style={{ color: info.color }}>{info.icon}</span>
@@ -268,7 +268,7 @@ export function Contact() {
                       </label>
                       <textarea
                         required
-                        rows={5}
+                        rows={3}
                         value={form.message}
                         onChange={(e) =>
                           setForm({ ...form, message: e.target.value })

@@ -17,8 +17,7 @@ export function About() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <>
-    <section id="about" className="py-24 bg-[#020818] relative overflow-hidden">
+    <div id="about" className="py-24 bg-[#020818] relative overflow-hidden">
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1677ff]/8 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,8 +32,12 @@ export function About() {
             <div className="grid grid-cols-2 gap-4">
               <motion.div
                 animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="col-span-2 h-52 rounded-2xl overflow-hidden shadow-2xl"
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="col-span-2 h-102 rounded-2xl overflow-hidden shadow-2xl"
               >
                 <img
                   src="https://images.unsplash.com/photo-1739298061757-7a3339cee982?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800"
@@ -44,8 +47,13 @@ export function About() {
               </motion.div>
               <motion.div
                 animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="h-40 rounded-2xl overflow-hidden shadow-xl"
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
+                className="h-70 rounded-2xl overflow-hidden shadow-xl"
               >
                 <img
                   src="https://images.unsplash.com/photo-1568716353609-12ddc5c67f04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400"
@@ -55,8 +63,13 @@ export function About() {
               </motion.div>
               <motion.div
                 animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                className="h-40 rounded-2xl overflow-hidden shadow-xl"
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 2,
+                }}
+                className="h-70 rounded-2xl overflow-hidden shadow-xl"
               >
                 <img
                   src="https://images.unsplash.com/photo-1544717305-f9c88f2897bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400"
@@ -74,7 +87,11 @@ export function About() {
               className="absolute -bottom-5 -right-5 w-28 h-28 bg-gradient-to-br from-[#1677ff] to-[#00d4ff] rounded-2xl flex flex-col items-center justify-center shadow-2xl"
             >
               <span className="text-white font-black text-3xl">3+</span>
-              <span className="text-white/90 text-xs text-center leading-tight">Years of<br />Excellence</span>
+              <span className="text-white/90 text-xs text-center leading-tight">
+                Years of
+                <br />
+                Excellence
+              </span>
             </motion.div>
           </motion.div>
 
@@ -87,17 +104,28 @@ export function About() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1677ff]/15 border border-[#1677ff]/30 rounded-full text-[#1677ff] text-sm font-medium mb-5">
               About Us
             </div>
-            <h2 className="text-white mb-4" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 800, lineHeight: 1.2 }}>
-              Uganda's Premier Technology & Services Company
+            <h2
+              className="text-white mb-4"
+              style={{
+                fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
+                fontWeight: 800,
+                lineHeight: 1.2,
+              }}
+            >
+              Uganda’s Elite Technology Solutions Company
             </h2>
             <p className="text-gray-400 leading-relaxed mb-6">
-              Founded in 2022, <strong className="text-white">BGIMAHOOD TECHNOLOGIES</strong> is a registered company based in Uganda
-              that delivers comprehensive technology solutions. From cutting-edge software development to sound system hiring
-              and government online services — we are your trusted all-in-one partner.
+              Founded in 2022,{" "}
+              <strong className="text-white">BGIMAHOOD TECHNOLOGIES</strong> is
+              a registered company based in Uganda that delivers comprehensive
+              technology solutions. From cutting-edge software development to
+              sound system hiring and government online services — we are your
+              trusted all-in-one partner.
             </p>
             <p className="text-gray-400 leading-relaxed mb-8">
-              Our team of passionate professionals combines technical expertise with deep knowledge of Uganda's business
-              ecosystem to deliver solutions that truly make a difference for our clients.
+              Our team of passionate professionals combines technical expertise
+              with deep knowledge of Uganda's business ecosystem to deliver
+              solutions that truly make a difference for our clients.
             </p>
 
             {/* Feature list */}
@@ -119,17 +147,33 @@ export function About() {
             {/* Cards */}
             <div className="grid grid-cols-3 gap-3">
               {[
-                { icon: <Target size={20} />, title: "Our Mission", text: "Empower businesses with smart tech" },
-                { icon: <Eye size={20} />, title: "Our Vision", text: "Leading tech hub in East Africa" },
-                { icon: <Zap size={20} />, title: "Our Edge", text: "Fast, affordable, reliable delivery" },
+                {
+                  icon: <Target size={20} />,
+                  title: "Our Mission",
+                  text: "Empower businesses with smart tech",
+                },
+                {
+                  icon: <Eye size={20} />,
+                  title: "Our Vision",
+                  text: "Leading tech hub in East Africa",
+                },
+                {
+                  icon: <Zap size={20} />,
+                  title: "Our Edge",
+                  text: "Fast, affordable, reliable delivery",
+                },
               ].map((item) => (
                 <motion.div
                   key={item.title}
                   whileHover={{ y: -4, boxShadow: "0 10px 30px #1677ff22" }}
                   className="bg-white/5 border border-white/10 rounded-xl p-3 text-center transition-all"
                 >
-                  <div className="text-[#1677ff] mb-2 flex justify-center">{item.icon}</div>
-                  <div className="text-white text-xs font-semibold mb-1">{item.title}</div>
+                  <div className="text-[#1677ff] mb-2 flex justify-center">
+                    {item.icon}
+                  </div>
+                  <div className="text-white text-xs font-semibold mb-1">
+                    {item.title}
+                  </div>
                   <div className="text-gray-500 text-xs">{item.text}</div>
                 </motion.div>
               ))}
@@ -137,7 +181,6 @@ export function About() {
           </motion.div>
         </div>
       </div>
-    </section>
-    </>
+    </div>
   );
 }
