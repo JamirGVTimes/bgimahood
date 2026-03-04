@@ -93,46 +93,45 @@ export function Hero() {
   };
 
   return (
-    <>
-      <section
-        id="home"
-        className="relative min-h-screen flex flex-col overflow-hidden bg-[#020818]"
-      >
-        {/* ===== ADMARK SOUND SYSTEMS BANNER — TOP ===== */}
-        <div className="relative z-20 w-full bg-gradient-to-r from-[#0a0f2e] via-[#1a0a35] to-[#0a0f2e] border-b border-[#a855f7]/30 pt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            {/* Section Label */}
-            <div className="flex items-center justify-between mb-5">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="flex items-center gap-3"
-              >
-                <div className="flex items-center gap-2 px-4 py-2 bg-[#a855f7]/15 border border-[#a855f7]/40 rounded-full">
-                  <span className="w-2 h-2 rounded-full bg-[#a855f7] animate-pulse" />
-                  <span className="text-[#a855f7] text-sm font-bold tracking-wide">
-                    🔊 ADMARK SOUND SYSTEMS — Available for Hire
-                  </span>
-                </div>
-              </motion.div>
-              <motion.button
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                whileHover={{ scale: 1.04 }}
-                onClick={() =>
-                  document
-                    .querySelector("#events")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="hidden sm:flex items-center gap-2 px-4 py-2 bg-[#a855f7] text-white text-xs font-semibold rounded-full shadow-lg shadow-[#a855f7]/30"
-              >
-                Book Now <ArrowRight size={12} />
-              </motion.button>
-            </div>
+    <div
+      id="home"
+      className="relative min-h-screen flex flex-col overflow-hidden bg-[#020818]"
+    >
+      {/* ===== ADMARK SOUND SYSTEMS BANNER — TOP ===== */}
+      <div className="relative z-20 w-full bg-gradient-to-r from-[#0a0f2e] via-[#1a0a35] to-[#0a0f2e] border-b border-[#a855f7]/30 pt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          {/* Section Label */}
+          <div className="flex items-center justify-between mb-5">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex items-center gap-3"
+            >
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#a855f7]/15 border border-[#a855f7]/40 rounded-full">
+                <span className="w-2 h-2 rounded-full bg-[#a855f7] animate-pulse" />
+                <span className="text-[#a855f7] text-sm font-bold tracking-wide">
+                  🔊 ADMARK SOUND SYSTEMS — Available for Hire
+                </span>
+              </div>
+            </motion.div>
+            <motion.button
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              whileHover={{ scale: 1.04 }}
+              onClick={() =>
+                document
+                  .querySelector("#events")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-[#a855f7] text-white text-xs font-semibold rounded-full shadow-lg shadow-[#a855f7]/30"
+            >
+              Book Now <ArrowRight size={12} />
+            </motion.button>
+          </div>
 
-            {/* Product Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {/* Product Cards */}
+          {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {ADMARK_PRODUCTS.map((product, i) => (
                 <motion.div
                   key={product.id}
@@ -146,7 +145,6 @@ export function Hero() {
                   className="relative rounded-2xl overflow-hidden border border-white/10 hover:border-white/25 transition-all cursor-pointer group"
                   style={{ background: "rgba(255,255,255,0.04)" }}
                 >
-                  {/* Image */}
                   <div className="relative h-36 overflow-hidden">
                     <img
                       src={product.image}
@@ -154,7 +152,7 @@ export function Hero() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f2e]/90 via-[#0a0f2e]/30 to-transparent" />
-                    {/* Badge */}
+                    // Badge 
                     <div
                       className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-bold text-white shadow-lg"
                       style={{
@@ -163,14 +161,14 @@ export function Hero() {
                     >
                       {product.badge}
                     </div>
-                    {/* Admark Logo pill */}
+                    // Admark Logo pill 
                     <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm border border-white/20">
                       <span className="text-white font-black text-xs tracking-widest">
                         ADMARK
                       </span>
                     </div>
                   </div>
-                  {/* Info */}
+                  // Info 
                   <div className="p-4 flex items-center justify-between">
                     <div>
                       <div className="text-white font-bold text-sm">
@@ -194,9 +192,9 @@ export function Hero() {
                   </div>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
 
-            {/* Specs ticker */}
+          {/* // Specs ticker 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -221,14 +219,14 @@ export function Hero() {
           </div>
         </div>
 
-        {/* ===== HERO MAIN CONTENT ===== */}
+        // ===== HERO MAIN CONTENT =====
         <div className="relative flex-1 flex items-center">
-          {/* Gradient Orbs */}
+        // Gradient Orbs 
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-[#1677ff]/20 blur-[120px]" />
             <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#00d4ff]/15 blur-[100px]" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#0a0f2e]/80 blur-[60px]" />
-            {/* Grid */}
+            // Grid
             <div
               className="absolute inset-0 opacity-10"
               style={{
@@ -236,7 +234,7 @@ export function Hero() {
                 backgroundSize: "60px 60px",
               }}
             />
-            {/* Particles */}
+            // Particles 
             {PARTICLES.map((p) => (
               <motion.div
                 key={p.id}
@@ -256,7 +254,7 @@ export function Hero() {
                 }}
               />
             ))}
-          </div>
+          </div> */}
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -472,7 +470,7 @@ export function Hero() {
         >
           <ChevronDown size={32} />
         </motion.button>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }
