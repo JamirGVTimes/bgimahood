@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
+import bgimaLogo from "../../images/Bgima.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -49,9 +50,9 @@ export function Navbar() {
             whileHover={{ scale: 1.04 }}
             onClick={() => handleNav("Home", "#home")}
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1677ff] to-[#00d4ff] flex items-center justify-center shadow-lg">
-              <span className="text-white font-black text-sm">BT</span>
-            </div>
+            {/* <span className="text-white font-black text-sm">BT</span> */}
+            <img src={bgimaLogo} alt="Bgima Logo" className="w-15 h-12" />
+
             <div className="hidden sm:block">
               <div className="text-white font-black text-sm leading-tight">
                 BGIMAHOOD
