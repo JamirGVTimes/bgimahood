@@ -12,10 +12,16 @@ const PARTICLES = Array.from({ length: 30 }, (_, i) => ({
 }));
 
 const TYPED_WORDS = [
-  "WebApps",
+  "Inventory Management Systems",
+  "Payment Gateway Integrations",
+  "Custom Software Solutions",
+  "Cloud-Based Applications",
+  "Microservices APIs",
+  "Progressive Web Apps (PWAs)",
+  "Workflow Automation Systems",
+  "RESTful APIs",
   "SaaS Platforms",
   "RealTime Apps",
-  "Portals",
   "Digital Solutions",
 ];
 
@@ -101,7 +107,7 @@ export function Hero() {
       <div className="relative z-20 w-full bg-gradient-to-r from-[#0a0f2e] via-[#1a0a35] to-[#0a0f2e] border-b border-[#a855f7]/30 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {/* Section Label */}
-          <div className="flex items-center justify-between mb-5">
+          {/* <div className="flex items-center justify-between mb-5">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -128,7 +134,7 @@ export function Hero() {
             >
               Book Now <ArrowRight size={12} />
             </motion.button>
-          </div>
+          </div> */}
 
           {/* Product Cards */}
           {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -256,39 +262,28 @@ export function Hero() {
             ))}
           </div> */}
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
+          <div className="relative z-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full py-14">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
               <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#1677ff]/15 border border-[#1677ff]/30 rounded-full text-[#1677ff] text-sm font-medium mb-6"
-                >
-                  <span className="w-2 h-2 rounded-full bg-[#1677ff] animate-pulse" />
-                  Est. 2022 · Uganda's Tech Innovators
-                </motion.div>
-
                 <motion.h1
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.1 }}
-                  className="text-white mb-4"
+                  className="text-white mb-6"
                   style={{
-                    fontSize: "clamp(2.2rem, 5vw, 3.8rem)",
-                    lineHeight: 1.1,
+                    fontSize: "clamp(2.2rem, 4vw, 3.8rem)",
+                    lineHeight: 1.2,
                     fontWeight: 900,
                   }}
                 >
-                  We Build
-                  <br />
+                  We Craft <br />
                   <span className="bg-gradient-to-r from-[#1677ff] to-[#00d4ff] bg-clip-text text-transparent">
                     {displayed}
                     <span className="animate-pulse">|</span>
                   </span>
                   <br />
-                  That Transform Business
+                  that transform Organizations
                 </motion.h1>
 
                 <motion.p

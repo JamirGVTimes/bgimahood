@@ -13,6 +13,7 @@ import {
   CheckCircle2,
   ArrowRight,
 } from "lucide-react";
+import { Space } from "antd";
 
 const services = [
   {
@@ -144,15 +145,18 @@ export function OnlineServices() {
                 whileHover={{ y: -6, boxShadow: `0 20px 40px ${svc.color}22` }}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 transition-all hover:border-white/20 group"
               >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
-                  style={{ background: `${svc.color}22` }}
-                >
-                  <span style={{ color: svc.color }}>{svc.icon}</span>
-                </div>
-                <h3 className="text-white font-bold text-base mb-2">
-                  {svc.title}
-                </h3>
+                <Space>
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                    style={{ background: `${svc.color}22` }}
+                  >
+                    <span style={{ color: svc.color }}>{svc.icon}</span>
+                  </div>
+                  <h3 className="text-white font-bold text-base mb-2">
+                    {svc.title}
+                  </h3>{" "}
+                </Space>
+
                 <p className="text-gray-500 text-sm mb-4 leading-relaxed">
                   {svc.desc}
                 </p>

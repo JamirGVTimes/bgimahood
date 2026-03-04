@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: <Phone size={20} />,
     label: "Call / WhatsApp",
-    value: "+256 700 000 000",
+    value: "+256 768 683090",
     sub: "Mon – Sat, 8am – 8pm",
     color: "#10b981",
   },
@@ -98,7 +98,7 @@ export function Contact() {
                 fontWeight: 800,
               }}
             >
-              Start a Conversation
+              Let's Talk
             </h2>
             <p className="text-gray-400 max-w-lg mx-auto">
               Ready to work together? Contact us for a free consultation and
@@ -163,7 +163,7 @@ export function Contact() {
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                href="https://wa.me/256700000000"
+                href="https://wa.me/256768683090"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full py-3.5 bg-[#25D366] text-white font-semibold rounded-xl shadow-lg hover:shadow-[#25D366]/30 transition-shadow"
