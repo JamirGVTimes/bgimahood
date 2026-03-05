@@ -46,7 +46,7 @@ export function Footer() {
 
   return (
     <>
-      <footer className="bg-[#020818] border-t border-white/10">
+      <footer className="bg-[#04182B] border-t border-white/10">
         {/* CTA Banner */}
         <div className="bg-gradient-to-r from-[#0a0f2e] via-[#1677ff]/20 to-[#0a0f2e] py-10 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
@@ -109,22 +109,22 @@ export function Footer() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-500 text-sm leading-relaxed mb-5 max-w-xs">
+              <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs">
                 Uganda's premier technology company delivering software
                 development, sound systems, event management, and government
                 online services since 2022.
               </p>
               <div className="space-y-2 mb-6">
-                <div className="flex items-center gap-2 text-gray-500 text-xs">
+                <div className="flex items-center gap-2 text-gray-400 text-xs">
                   <MapPin size={12} className="text-[#1677ff]" /> Kampala,
                   Uganda, East Africa
                 </div>
-                <div className="flex items-center gap-2 text-gray-500 text-xs">
+                <div className="flex items-center gap-2 text-gray-400 text-xs">
                   <Phone size={12} className="text-[#1677ff]" /> +256 768 683
                   090
                 </div>
-                <div className="flex items-center gap-2 text-gray-500 text-xs">
-                  <Mail size={12} className="text-[#1677ff]" />{" "}
+                <div className="flex items-center gap-2 text-gray-400 text-xs">
+                  <Mail size={12} className="text-[#1677ff]" />
                   info@bgimahood.com
                 </div>
               </div>
@@ -134,7 +134,7 @@ export function Footer() {
                     key={href + color}
                     href={href}
                     whileHover={{ scale: 1.15, y: -2 }}
-                    className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-500 hover:text-white hover:border-white/20 transition-all"
+                    className="w-8 h-8 rounded-lg bg-white/20 border border-white/90 flex items-center justify-center text-gray-200 hover:text-white hover:border-white/20 transition-all"
                   >
                     <Icon size={14} />
                   </motion.a>
@@ -154,7 +154,7 @@ export function Footer() {
                       <motion.a
                         href="#"
                         whileHover={{ x: 3 }}
-                        className="text-gray-500 hover:text-[#1677ff] text-xs transition-colors block"
+                        className="text-gray-400 hover:text-[#1677ff] text-xs transition-colors block"
                       >
                         {item}
                       </motion.a>
@@ -167,12 +167,12 @@ export function Footer() {
 
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-600 text-xs">
+            <div className="text-gray-200 text-xs">
               © {new Date().getFullYear()} BGIMAHOOD TECHNOLOGIES. All rights
               reserved. | Registered in Uganda, 2022.
             </div>
             <div className="flex items-center gap-4">
-              <span className="text-gray-600 text-xs">🇺🇬 Made in Uganda</span>
+              <span className="text-gray-200 text-xs">🇺🇬 Made in Uganda</span>
               <motion.button
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}

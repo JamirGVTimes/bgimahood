@@ -263,7 +263,7 @@ export function Hero() {
           </div> */}
 
           <div className="relative z-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full py-14">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
               <div>
                 <motion.h1
@@ -371,7 +371,7 @@ export function Hero() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="absolute top-10 right-0 w-[340px] h-[220px] rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+                  className="absolute top-1 right-0 w-[340px] h-[220px] rounded-2xl overflow-hidden shadow-2xl border border-white/10"
                 >
                   <img
                     src="https://images.unsplash.com/photo-1607431067517-fda93b3e0aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600"
@@ -441,9 +441,7 @@ export function Hero() {
                   }}
                   className="absolute top-1/2 right-[-20px] bg-gradient-to-br from-[#1677ff] to-[#00d4ff] text-white text-xs font-bold px-4 py-3 rounded-2xl shadow-2xl"
                 >
-                  <div className="text-lg font-black">✓</div>
-                  <div>Certified</div>
-                  <div>Company</div>
+                  <div className="text-sm font-medium">✓ Certified Company</div>
                 </motion.div>
 
                 {/* Glow ring */}
