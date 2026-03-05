@@ -103,167 +103,10 @@ export function Hero() {
       id="home"
       className="relative min-h-screen flex flex-col overflow-hidden bg-[#020818]"
     >
-      {/* ===== ADMARK SOUND SYSTEMS BANNER — TOP ===== */}
       <div className="relative z-20 w-full bg-gradient-to-r from-[#0a0f2e] via-[#1a0a35] to-[#0a0f2e] border-b border-[#a855f7]/30 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          {/* Section Label */}
-          {/* <div className="flex items-center justify-between mb-5">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center gap-3"
-            >
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#a855f7]/15 border border-[#a855f7]/40 rounded-full">
-                <span className="w-2 h-2 rounded-full bg-[#a855f7] animate-pulse" />
-                <span className="text-[#a855f7] text-sm font-bold tracking-wide">
-                  🔊 ADMARK SOUND SYSTEMS — Available for Hire
-                </span>
-              </div>
-            </motion.div>
-            <motion.button
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              whileHover={{ scale: 1.04 }}
-              onClick={() =>
-                document
-                  .querySelector("#events")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-[#a855f7] text-white text-xs font-semibold rounded-full shadow-lg shadow-[#a855f7]/30"
-            >
-              Book Now <ArrowRight size={12} />
-            </motion.button>
-          </div> */}
-
-          {/* Product Cards */}
-          {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {ADMARK_PRODUCTS.map((product, i) => (
-                <motion.div
-                  key={product.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.15, duration: 0.6 }}
-                  whileHover={{
-                    y: -5,
-                    boxShadow: `0 20px 40px ${product.color}33`,
-                  }}
-                  className="relative rounded-2xl overflow-hidden border border-white/10 hover:border-white/25 transition-all cursor-pointer group"
-                  style={{ background: "rgba(255,255,255,0.04)" }}
-                >
-                  <div className="relative h-36 overflow-hidden">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f2e]/90 via-[#0a0f2e]/30 to-transparent" />
-                    // Badge 
-                    <div
-                      className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-bold text-white shadow-lg"
-                      style={{
-                        background: `linear-gradient(135deg, ${product.color}, ${product.color}99)`,
-                      }}
-                    >
-                      {product.badge}
-                    </div>
-                    // Admark Logo pill 
-                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm border border-white/20">
-                      <span className="text-white font-black text-xs tracking-widest">
-                        ADMARK
-                      </span>
-                    </div>
-                  </div>
-                  // Info 
-                  <div className="p-4 flex items-center justify-between">
-                    <div>
-                      <div className="text-white font-bold text-sm">
-                        {product.name}
-                      </div>
-                      <div className="text-gray-400 text-xs mt-0.5">
-                        {product.type}
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div
-                        className="font-bold text-sm"
-                        style={{ color: product.color }}
-                      >
-                        {product.power}
-                      </div>
-                      <div className="flex items-center gap-1 text-gray-500 text-xs justify-end mt-0.5">
-                        <Volume2 size={10} /> For Hire
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div> */}
-
-          {/* // Specs ticker 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-1 text-xs text-gray-500"
-            >
-              {[
-                "Line Arrays",
-                "Column Speakers",
-                "Subwoofers",
-                "Wireless Mics",
-                "Digital Mixers",
-                "Amplifiers",
-                "Stage Monitors",
-              ].map((item) => (
-                <span key={item} className="flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#a855f7]/60" />
-                  {item}
-                </span>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-
-        // ===== HERO MAIN CONTENT =====
-        <div className="relative flex-1 flex items-center">
-        // Gradient Orbs 
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-[#1677ff]/20 blur-[120px]" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#00d4ff]/15 blur-[100px]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#0a0f2e]/80 blur-[60px]" />
-            // Grid
-            <div
-              className="absolute inset-0 opacity-10"
-              style={{
-                backgroundImage: `linear-gradient(#1677ff22 1px, transparent 1px), linear-gradient(90deg, #1677ff22 1px, transparent 1px)`,
-                backgroundSize: "60px 60px",
-              }}
-            />
-            // Particles 
-            {PARTICLES.map((p) => (
-              <motion.div
-                key={p.id}
-                className="absolute rounded-full bg-[#1677ff]"
-                style={{
-                  left: `${p.x}%`,
-                  top: `${p.y}%`,
-                  width: p.size,
-                  height: p.size,
-                }}
-                animate={{ y: [0, -30, 0], opacity: [0.2, 0.8, 0.2] }}
-                transition={{
-                  duration: p.duration,
-                  delay: p.delay,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
-          </div> */}
-
-          <div className="relative z-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full py-14">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative z-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full py-10">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
               {/* Left Content */}
               <div>
                 <motion.h1
@@ -272,9 +115,11 @@ export function Hero() {
                   transition={{ duration: 0.7, delay: 0.1 }}
                   className="text-white mb-6"
                   style={{
-                    fontSize: "clamp(2.2rem, 4vw, 3.8rem)",
+                    fontSize: "clamp(2.2rem, 1.6vw, 3.8rem)",
                     lineHeight: 1.2,
                     fontWeight: 900,
+                    paddingLeft: "1rem",
+                    borderLeft: "5px solid rgb(54, 114, 203)",
                   }}
                 >
                   We Craft <br />
@@ -283,14 +128,15 @@ export function Hero() {
                     <span className="animate-pulse">|</span>
                   </span>
                   <br />
-                  that transform Organizations
+                  <span>that transform Organizations</span>
                 </motion.h1>
 
                 <motion.p
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.2 }}
-                  className="text-gray-400 text-lg mb-8 max-w-lg leading-relaxed"
+                  className="text-gray-300 text-lg mb-8 max-w-lg leading-relaxed"
+                  style={{ lineHeight: 1.5 }}
                 >
                   BGIMAHOOD TECHNOLOGIES — your all-in-one technology partner
                   for software development, sound systems, event management, and
