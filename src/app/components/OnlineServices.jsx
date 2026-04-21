@@ -63,8 +63,8 @@ const services = [
     icon: <Globe size={24} />,
     color: "#00d4ff",
     title: "Other Online Services",
-    desc: "We assist with NSSF, UMRA, KCCA, and many other government and private web-based services.",
-    details: ["NSSF registration", "UMRA licensing", "KCCA payments"],
+    desc: "We assist with NSSF, URA, URSB, KCCA, and many other government and private web-based services.",
+    details: ["NSSF registration", "URA licensing", "KCCA payments"],
   },
 ];
 

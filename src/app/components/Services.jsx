@@ -186,7 +186,7 @@ const serviceCategories = [
       {
         icon: <Globe size={18} />,
         name: "Other Online Services",
-        desc: "NSSF, UMRA, and various online activities",
+        desc: "NSSF, URA, URSB, and various online activities",
       },
     ],
   },
