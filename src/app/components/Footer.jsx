@@ -73,7 +73,7 @@ export function Footer() {
               </motion.button>
               <motion.a
                 whileHover={{ scale: 1.05 }}
-                href="https://wa.me/256768683090"
+                href="https://wa.me/256768683090?text=Hello%20Bgimahood%20Technologies,%20I%E2%80%99m%20interested%20in%20your%20software%20and%20event%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-[#25D366] text-white font-semibold rounded-full shadow-xl text-sm flex items-center gap-2"
