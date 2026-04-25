@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
-import bgimaLogo from "../../images/Bgima.png";
+import bgimaLogo from "../../images/bgimahood_logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -51,10 +51,10 @@ export function Navbar() {
             onClick={() => handleNav("Home", "#home")}
           >
             {/* <span className="text-white font-black text-sm">BT</span> */}
-            <img src={bgimaLogo} alt="Bgima Logo" className="w-15 h-12" />
+            <img src={bgimaLogo} alt="Bgima Logo" className="w-25 h-20" />
 
             <div className="hidden sm:block">
-              <div className="text-white font-black text-sm leading-tight">
+              <div className="text-white font-black text-xl leading-tight">
                 BGIMAHOOD
               </div>
               <div className="text-[#1677ff] text-[10px] font-semibold tracking-widest">

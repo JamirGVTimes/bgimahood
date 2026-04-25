@@ -11,7 +11,7 @@ import {
   Mail,
   MapPin,
 } from "lucide-react";
-import bgimaLogo from "../../images/Bgima.png";
+import bgimaLogo from "../../images/bgimahood_logo.png";
 
 const links = {
   Services: [
@@ -98,10 +98,10 @@ export function Footer() {
             {/* Brand */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <img src={bgimaLogo} alt="Bgima Logo" className="w-15 h-12" />
+                <img src={bgimaLogo} alt="Bgima Logo" className="w-30 h-25" />
 
                 <div>
-                  <div className="text-white font-black text-sm leading-tight">
+                  <div className="text-white font-black text-xl leading-tight">
                     BGIMAHOOD
                   </div>
                   <div className="text-[#1677ff] text-[10px] font-semibold tracking-widest">
