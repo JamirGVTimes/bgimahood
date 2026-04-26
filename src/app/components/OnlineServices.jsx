@@ -25,7 +25,7 @@ const services = [
   },
   {
     icon: <Car size={24} />,
-    color: "#1677ff",
+    color: "#207BA1",
     title: "Vehicle Logbook Transfer",
     desc: "Transfer ownership of vehicles and motorcycles quickly through the URSB/URA system with full documentation support.",
     details: [
@@ -99,7 +99,7 @@ export function OnlineServices() {
     <>
       <section
         id="online-services"
-        className="py-24 bg-[#020818] relative overflow-hidden"
+        className="py-24 bg-[#071921] relative overflow-hidden"
       >
         <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#10b981]/8 rounded-full blur-[100px] pointer-events-none" />
 

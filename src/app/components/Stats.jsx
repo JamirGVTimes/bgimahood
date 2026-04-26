@@ -9,7 +9,7 @@ const stats = [
     value: 200,
     suffix: "+",
     label: "Projects Delivered",
-    color: "#1677ff",
+    color: "#207BA1",
   },
   {
     icon: <Users size={28} />,
@@ -77,9 +77,9 @@ export function Stats() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <div className="py-20 bg-[#020818] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1677ff] to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1677ff] to-transparent" />
+    <div className="py-20 bg-[#09232E] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#207BA1] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#207BA1] to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div

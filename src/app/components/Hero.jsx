@@ -44,7 +44,7 @@ const ADMARK_PRODUCTS = [
     image:
       "https://images.unsplash.com/photo-1634041322596-61ff0de5af09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
     badge: "Event Pro",
-    color: "#1677ff",
+    color: "#207BA1",
   },
   {
     id: 3,
@@ -101,9 +101,9 @@ export function Hero() {
   return (
     <div
       id="home"
-      className="relative min-h-screen flex flex-col overflow-hidden bg-[#020818]"
+      className="relative min-h-screen flex flex-col overflow-hidden bg-[#0B3240]"
     >
-      <div className="relative z-20 w-full bg-gradient-to-r from-[#0a0f2e] via-[#1a0a35] to-[#0a0f2e] border-b border-[#a855f7]/30 pt-16">
+      <div className="relative z-20 w-full bg-gradient-to-tr from-[#0B171C] via-[#05141A] to-[#0B3240] border-b border-[#05141A]/30 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="relative z-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full py-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -123,7 +123,7 @@ export function Hero() {
                   }}
                 >
                   We Craft <br />
-                  <span className="bg-gradient-to-r from-[#1677ff] to-[#00d4ff] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#207BA1] to-[#00d4ff] bg-clip-text text-transparent">
                     {displayed}
                     <span className="animate-pulse">|</span>
                   </span>
@@ -152,7 +152,7 @@ export function Hero() {
                   <motion.button
                     whileHover={{
                       scale: 1.05,
-                      boxShadow: "0 0 30px #1677ff55",
+                      boxShadow: "0 0 30px #207BA155",
                     }}
                     whileTap={{ scale: 0.97 }}
                     onClick={() =>
@@ -160,7 +160,7 @@ export function Hero() {
                         .querySelector("#contact")
                         ?.scrollIntoView({ behavior: "smooth" })
                     }
-                    className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#1677ff] to-[#00d4ff] text-white font-semibold rounded-full shadow-xl"
+                    className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] text-white font-semibold rounded-full shadow-xl"
                   >
                     Get a Free Quote <ArrowRight size={16} />
                   </motion.button>
@@ -226,7 +226,7 @@ export function Hero() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#020818]/80 to-transparent" />
                   <div className="absolute bottom-4 left-4 flex items-center gap-2">
-                    <div className="w-6 h-6 bg-[#1677ff] rounded flex items-center justify-center">
+                    <div className="w-6 h-6 bg-[#207BA1] rounded flex items-center justify-center">
                       <span className="text-white text-[10px] font-black">
                         VS
                       </span>
@@ -285,14 +285,14 @@ export function Hero() {
                     ease: "easeInOut",
                     delay: 2,
                   }}
-                  className="absolute top-1/2 right-[-20px] bg-gradient-to-br from-[#1677ff] to-[#00d4ff] text-white text-xs font-bold px-4 py-3 rounded-2xl shadow-2xl"
+                  className="absolute top-1/2 right-[-20px] bg-gradient-to-br from-[#207BA1] to-[#00d4ff] text-white text-xs font-bold px-4 py-3 rounded-2xl shadow-2xl"
                 >
                   <div className="text-sm font-medium">✓ Certified Company</div>
                 </motion.div>
 
                 {/* Glow ring */}
                 <div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-[#1677ff]/20 animate-ping"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-[#207BA1]/20 animate-ping"
                   style={{ animationDuration: "3s" }}
                 />
               </motion.div>

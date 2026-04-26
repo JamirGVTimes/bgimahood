@@ -25,8 +25,8 @@ const serviceCategories = [
   {
     id: "software",
     icon: <Code2 size={28} />,
-    color: "#1677ff",
-    bgColor: "from-[#1677ff]/20 to-[#00d4ff]/10",
+    color: "#207BA1",
+    bgColor: "from-[#207BA1]/20 to-[#00d4ff]/10",
     title: "Software Development",
     subtitle: "Custom digital solutions built to scale",
     image:
@@ -199,8 +199,8 @@ export function Services() {
   const current = serviceCategories.find((s) => s.id === active);
 
   return (
-    <div id="services" className="py-24 bg-[#050c1a] relative overflow-hidden">
-      <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#1677ff]/8 rounded-full blur-[100px] pointer-events-none" />
+    <div id="services" className="py-24 bg-[#09232E] relative overflow-hidden">
+      <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#207BA1]/8 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Header */}
@@ -210,7 +210,7 @@ export function Services() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1677ff]/15 border border-[#1677ff]/30 rounded-full text-[#1677ff] text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#207BA1]/15 border border-[#207BA1]/30 rounded-full text-[#207BA1] text-sm font-medium mb-4">
             What We Offer
           </div>
           <h2

@@ -46,9 +46,9 @@ export function Footer() {
 
   return (
     <>
-      <footer className="bg-[#04182B] border-t border-white/10">
+      <footer className="bg-[#071921] border-t border-white/10">
         {/* CTA Banner */}
-        <div className="bg-gradient-to-r from-[#0a0f2e] via-[#1677ff]/20 to-[#0a0f2e] py-10 border-b border-white/10">
+        <div className="bg-gradient-to-r from-[#071921] via-[#294B59]/20 to-[#073042] py-10 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
             <div>
               <h3 className="text-white font-black text-2xl mb-1">
@@ -67,7 +67,7 @@ export function Footer() {
                     .querySelector("#contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="px-6 py-3 bg-gradient-to-r from-[#1677ff] to-[#00d4ff] text-white font-semibold rounded-full shadow-xl text-sm"
+                className="px-6 py-3 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] text-white font-semibold rounded-full shadow-xl text-sm"
               >
                 Get Free Quote
               </motion.button>
@@ -97,14 +97,14 @@ export function Footer() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <img src={bgimaLogo} alt="Bgima Logo" className="w-30 h-25" />
+              <div className="flex items-center gap-1 mb-4">
+                <img src={bgimaLogo} alt="Bgima Logo" className="w-30 h-20" />
 
                 <div>
                   <div className="text-white font-black text-xl leading-tight">
                     BGIMAHOOD
                   </div>
-                  <div className="text-[#1677ff] text-[10px] font-semibold tracking-widest">
+                  <div className="text-[#207BA1] text-[10px] font-semibold tracking-widest">
                     TECHNOLOGIES
                   </div>
                 </div>
@@ -116,15 +116,15 @@ export function Footer() {
               </p>
               <div className="space-y-2 mb-6">
                 <div className="flex items-center gap-2 text-gray-400 text-xs">
-                  <MapPin size={12} className="text-[#1677ff]" /> Kampala,
+                  <MapPin size={12} className="text-[#207BA1]" /> Kampala,
                   Uganda, East Africa
                 </div>
                 <div className="flex items-center gap-2 text-gray-400 text-xs">
-                  <Phone size={12} className="text-[#1677ff]" /> +256 768 683
+                  <Phone size={12} className="text-[#207BA1]" /> +256 768 683
                   090
                 </div>
                 <div className="flex items-center gap-2 text-gray-400 text-xs">
-                  <Mail size={12} className="text-[#1677ff]" />
+                  <Mail size={12} className="text-[#207BA1]" />
                   info@bgimahood.com
                 </div>
               </div>
@@ -154,7 +154,7 @@ export function Footer() {
                       <motion.a
                         href="#"
                         whileHover={{ x: 3 }}
-                        className="text-gray-400 hover:text-[#1677ff] text-xs transition-colors block"
+                        className="text-gray-400 hover:text-[#207BA1] text-xs transition-colors block"
                       >
                         {item}
                       </motion.a>
@@ -177,7 +177,7 @@ export function Footer() {
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={scrollTop}
-                className="w-9 h-9 bg-[#1677ff] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#1677ff]/30"
+                className="w-9 h-9 bg-[#207BA1] rounded-full flex items-center justify-center text-white shadow-lg shadow-[#207BA1]/30"
               >
                 <ArrowUp size={16} />
               </motion.button>

@@ -8,7 +8,7 @@ const team = [
     name: "Jamir Muhumuza",
     role: "CEO & Lead Developer",
     avatar: "JM",
-    color: "#1677ff",
+    color: "#207BA1",
     skills: ["React", "Node.js", "Leadership"],
     bio: "Founder and visionary behind BGIMAHOOD TECHNOLOGIES with 6+ years in software engineering.",
   },
@@ -59,8 +59,8 @@ export function Team() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <div id="team" className="py-24 bg-[#050c1a] relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 w-96 h-72 bg-[#1677ff]/6 rounded-full blur-[100px] pointer-events-none" />
+    <div id="team" className="py-24 bg-[#0B171C] relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 w-96 h-72 bg-[#207BA1]/6 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
@@ -69,7 +69,7 @@ export function Team() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1677ff]/15 border border-[#1677ff]/30 rounded-full text-[#1677ff] text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#207BA1]/15 border border-[#207BA1]/30 rounded-full text-[#207BA1] text-sm font-medium mb-4">
             Our People
           </div>
           <h2

@@ -18,7 +18,7 @@ const contactInfo = [
     label: "Our Office",
     value: "Kampala, Uganda",
     sub: "East Africa",
-    color: "#1677ff",
+    color: "#207BA1",
   },
   {
     icon: <Phone size={20} />,
@@ -87,9 +87,9 @@ export function Contact() {
     <>
       <section
         id="contact"
-        className="py-24 bg-[#020818] relative overflow-hidden"
+        className="py-24 bg-[#071921] relative overflow-hidden"
       >
-        <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#1677ff]/8 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#207BA1]/8 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#10b981]/6 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
@@ -99,7 +99,7 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1677ff]/15 border border-[#1677ff]/30 rounded-full text-[#1677ff] text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#207BA1]/15 border border-[#207BA1]/30 rounded-full text-[#207BA1] text-sm font-medium mb-4">
               <MessageSquare size={14} /> Get In Touch
             </div>
             <h2
@@ -157,12 +157,12 @@ export function Contact() {
                 <div
                   className="absolute inset-0 opacity-20"
                   style={{
-                    backgroundImage: `linear-gradient(#1677ff22 1px, transparent 1px), linear-gradient(90deg, #1677ff22 1px, transparent 1px)`,
+                    backgroundImage: `linear-gradient(#207BA122 1px, transparent 1px), linear-gradient(90deg, #207BA122 1px, transparent 1px)`,
                     backgroundSize: "30px 30px",
                   }}
                 />
                 <div className="text-center relative z-10">
-                  <MapPin size={32} className="text-[#1677ff] mx-auto mb-2" />
+                  <MapPin size={32} className="text-[#207BA1] mx-auto mb-2" />
                   <div className="text-white font-semibold text-sm">
                     Kampala, Uganda
                   </div>
@@ -209,7 +209,7 @@ export function Contact() {
                             setForm({ ...form, name: e.target.value })
                           }
                           placeholder="e.g. John Ssemakula"
-                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#1677ff]/50 transition-colors"
+                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#207BA1]/50 transition-colors"
                         />
                       </div>
                       <div>
@@ -224,7 +224,7 @@ export function Contact() {
                             setForm({ ...form, email: e.target.value })
                           }
                           placeholder="john@example.com"
-                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#1677ff]/50 transition-colors"
+                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#207BA1]/50 transition-colors"
                         />
                       </div>
                     </div>
@@ -239,7 +239,7 @@ export function Contact() {
                             setForm({ ...form, phone: e.target.value })
                           }
                           placeholder="+256 7XX XXX XXX"
-                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#1677ff]/50 transition-colors"
+                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#207BA1]/50 transition-colors"
                         />
                       </div>
                       <div>
@@ -251,7 +251,7 @@ export function Contact() {
                           onChange={(e) =>
                             setForm({ ...form, service: e.target.value })
                           }
-                          className="w-full bg-[#0a0f2e] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#1677ff]/50 transition-colors"
+                          className="w-full bg-[#207BA1] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#207BA1]/50 transition-colors"
                         >
                           <option value="">Select a service...</option>
                           {services.map((s) => (
@@ -274,17 +274,17 @@ export function Contact() {
                           setForm({ ...form, message: e.target.value })
                         }
                         placeholder="Tell us about your project or service request..."
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#1677ff]/50 transition-colors resize-none"
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#207BA1]/50 transition-colors resize-none"
                       />
                     </div>
                     <motion.button
                       type="submit"
                       whileHover={{
                         scale: 1.02,
-                        boxShadow: "0 0 30px #1677ff44",
+                        boxShadow: "0 0 30px #207BA144",
                       }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full flex items-center justify-center gap-2 py-3.5 bg-gradient-to-r from-[#1677ff] to-[#00d4ff] text-white font-semibold rounded-xl shadow-xl"
+                      className="w-full flex items-center justify-center gap-2 py-3.5 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] text-white font-semibold rounded-xl shadow-xl"
                     >
                       <Send size={16} />
                       Send Message

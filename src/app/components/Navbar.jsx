@@ -39,7 +39,7 @@ export function Navbar() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#0a0f2e]/95 shadow-2xl backdrop-blur-md"
+            ? "bg-[#071921]/95 shadow-2xl backdrop-blur-md"
             : "bg-transparent"
         }`}
       >
@@ -51,13 +51,13 @@ export function Navbar() {
             onClick={() => handleNav("Home", "#home")}
           >
             {/* <span className="text-white font-black text-sm">BT</span> */}
-            <img src={bgimaLogo} alt="Bgima Logo" className="w-25 h-20" />
+            <img src={bgimaLogo} alt="Bgima Logo" className="w-35 h-20" />
 
             <div className="hidden sm:block">
               <div className="text-white font-black text-xl leading-tight">
                 BGIMAHOOD
               </div>
-              <div className="text-[#1677ff] text-[10px] font-semibold tracking-widest">
+              <div className="text-[#207BA1] text-[10px] font-semibold tracking-widest">
                 TECHNOLOGIES
               </div>
             </div>
@@ -71,7 +71,7 @@ export function Navbar() {
                 onClick={() => handleNav(link.label, link.href)}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors rounded-lg ${
                   active === link.label
-                    ? "text-[#1677ff]"
+                    ? "text-[#207BA1]"
                     : "text-gray-300 hover:text-white"
                 }`}
               >
@@ -79,7 +79,7 @@ export function Navbar() {
                 {active === link.label && (
                   <motion.div
                     layoutId="activeNav"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#1677ff] to-[#00d4ff] rounded-full"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] rounded-full"
                   />
                 )}
               </button>
@@ -92,7 +92,7 @@ export function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => handleNav("Contact", "#contact")}
-              className="px-5 py-2 bg-gradient-to-r from-[#1677ff] to-[#00d4ff] text-white text-sm font-semibold rounded-full shadow-lg hover:shadow-[#1677ff]/40 transition-shadow"
+              className="px-5 py-2 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] text-white text-sm font-semibold rounded-full shadow-lg hover:shadow-[#207BA1]/40 transition-shadow"
             >
               Get Started
             </motion.button>
@@ -123,7 +123,7 @@ export function Navbar() {
                     onClick={() => handleNav(link.label, link.href)}
                     className={`text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                       active === link.label
-                        ? "text-[#1677ff] bg-[#1677ff]/10"
+                        ? "text-[#207BA1] bg-[#207BA1]/10"
                         : "text-gray-300 hover:text-white hover:bg-white/5"
                     }`}
                   >
@@ -132,7 +132,7 @@ export function Navbar() {
                 ))}
                 <button
                   onClick={() => handleNav("Contact", "#contact")}
-                  className="mt-2 px-5 py-3 bg-gradient-to-r from-[#1677ff] to-[#00d4ff] text-white text-sm font-semibold rounded-full"
+                  className="mt-2 px-5 py-3 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] text-white text-sm font-semibold rounded-full"
                 >
                   Get Started
                 </button>

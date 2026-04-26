@@ -33,7 +33,7 @@ const projects = [
     desc: "Comprehensive school management portal with parent, teacher & admin dashboards.",
     image:
       "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=500",
-    color: "#1677ff",
+    color: "#207BA1",
     icon: <LayoutDashboard size={16} />,
   },
   {
@@ -93,8 +93,8 @@ export function Portfolio() {
     filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <div id="portfolio" className="py-24 bg-[#050c1a] relative overflow-hidden">
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-[#1677ff]/8 rounded-full blur-[80px] pointer-events-none" />
+    <div id="portfolio" className="py-24 bg-[#071921] relative overflow-hidden">
+      <div className="absolute top-1/2 left-0 w-72 h-72 bg-[#207BA1]/8 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
@@ -103,7 +103,7 @@ export function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1677ff]/15 border border-[#1677ff]/30 rounded-full text-[#1677ff] text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#207BA1]/15 border border-[#207BA1]/30 rounded-full text-[#207BA1] text-sm font-medium mb-4">
             Our Work
           </div>
           <h2
@@ -131,7 +131,7 @@ export function Portfolio() {
               onClick={() => setFilter(cat)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all border ${
                 filter === cat
-                  ? "bg-[#1677ff] text-white border-[#1677ff] shadow-lg shadow-[#1677ff]/30"
+                  ? "bg-[#207BA1] text-white border-[#207BA1] shadow-lg shadow-[#207BA1]/30"
                   : "bg-white/5 text-gray-400 border-white/10 hover:text-white hover:border-white/20"
               }`}
             >
@@ -170,7 +170,7 @@ export function Portfolio() {
                   </div>
                   {project.imageLabel && (
                     <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                      <Monitor size={10} className="text-[#1677ff]" />
+                      <Monitor size={10} className="text-[#207BA1]" />
                       <span className="text-white text-[10px] font-medium">
                         {project.imageLabel}
                       </span>

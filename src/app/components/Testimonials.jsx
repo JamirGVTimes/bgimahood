@@ -9,7 +9,7 @@ const testimonials = [
     name: "David Okello",
     role: "CEO, Okello Enterprises Ltd",
     avatar: "DO",
-    color: "#1677ff",
+    color: "#207BA1",
     rating: 5,
     text: "BGIMAHOOD TECHNOLOGIES built us a powerful web portal that streamlined all our operations. Delivery was fast and the team was professional throughout. Highly recommended!",
     service: "Web Portal Development",
@@ -87,8 +87,8 @@ export function Testimonials() {
 
   return (
     <>
-      <section className="py-24 bg-[#020818] relative overflow-hidden">
-        <div className="absolute bottom-0 right-1/4 w-96 h-80 bg-[#1677ff]/6 rounded-full blur-[120px] pointer-events-none" />
+      <section className="py-24 bg-[#0B171C] relative overflow-hidden">
+        <div className="absolute bottom-0 right-1/4 w-96 h-80 bg-[#207BA1]/6 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
           <motion.div
@@ -192,7 +192,7 @@ export function Testimonials() {
                     onClick={() => setCurrent(i)}
                     className={`rounded-full transition-all ${
                       i === current
-                        ? "w-6 h-2 bg-[#1677ff]"
+                        ? "w-6 h-2 bg-[#207BA1]"
                         : "w-2 h-2 bg-white/20"
                     }`}
                   />

@@ -17,8 +17,8 @@ export function About() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div id="about" className="py-24 bg-[#020818] relative overflow-hidden">
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1677ff]/8 rounded-full blur-[100px] pointer-events-none" />
+    <div id="about" className="py-24 bg-[#09232E] relative overflow-hidden">
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#207BA1]/8 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center" ref={ref}>
@@ -84,7 +84,7 @@ export function About() {
               initial={{ scale: 0 }}
               animate={inView ? { scale: 1 } : {}}
               transition={{ delay: 0.4, type: "spring" }}
-              className="absolute -bottom-5 -right-5 w-28 h-28 bg-gradient-to-br from-[#1677ff] to-[#00d4ff] rounded-2xl flex flex-col items-center justify-center shadow-2xl"
+              className="absolute -bottom-5 -right-5 w-28 h-28 bg-gradient-to-br from-[#207BA1] to-[#00d4ff] rounded-2xl flex flex-col items-center justify-center shadow-2xl"
             >
               <span className="text-white font-black text-3xl">3+</span>
               <span className="text-white/90 text-xs text-center leading-tight">
@@ -101,7 +101,7 @@ export function About() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1677ff]/15 border border-[#1677ff]/30 rounded-full text-[#1677ff] text-sm font-medium mb-5">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#207BA1]/15 border border-[#207BA1]/30 rounded-full text-[#207BA1] text-sm font-medium mb-5">
               About Us
             </div>
             <h2
@@ -138,7 +138,7 @@ export function About() {
                   transition={{ delay: 0.3 + i * 0.08 }}
                   className="flex items-center gap-3"
                 >
-                  <CheckCircle2 className="text-[#1677ff] shrink-0" size={18} />
+                  <CheckCircle2 className="text-[#207BA1] shrink-0" size={18} />
                   <span className="text-gray-300 text-sm">{f}</span>
                 </motion.div>
               ))}
@@ -165,10 +165,10 @@ export function About() {
               ].map((item) => (
                 <motion.div
                   key={item.title}
-                  whileHover={{ y: -4, boxShadow: "0 10px 30px #1677ff22" }}
+                  whileHover={{ y: -4, boxShadow: "0 10px 30px #207BA122" }}
                   className="bg-white/5 border border-white/10 rounded-xl p-3 text-center transition-all"
                 >
-                  <div className="text-[#1677ff] mb-2 flex justify-center">
+                  <div className="text-[#207BA1] mb-2 flex justify-center">
                     {item.icon}
                   </div>
                   <div className="text-white text-xs font-semibold mb-1">

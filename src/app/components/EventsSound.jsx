@@ -87,7 +87,7 @@ export function EventsSound() {
     <>
       <section
         id="events"
-        className="py-24 bg-[#050c1a] relative overflow-hidden"
+        className="py-24 bg-[#09232E] relative overflow-hidden"
       >
         <div className="absolute bottom-0 left-1/3 w-96 h-80 bg-[#a855f7]/8 rounded-full blur-[120px] pointer-events-none" />
 
