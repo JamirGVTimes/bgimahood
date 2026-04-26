@@ -119,7 +119,7 @@ export function Hero() {
                     lineHeight: 1.2,
                     fontWeight: 900,
                     paddingLeft: "1rem",
-                    borderLeft: "5px solid rgb(54, 114, 203)",
+                    borderLeft: "5px solid #207BA1",
                   }}
                 >
                   We Craft <br />
