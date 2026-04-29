@@ -65,9 +65,10 @@ export function Contact() {
     service: "",
     message: "",
   });
-
+  const [loading, setLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     console.log("Form submitted:", form);
     try {
       const ct = await axios.post(
@@ -77,6 +78,8 @@ export function Contact() {
       console.log("Message sent successfully:", ct.data);
     } catch (error) {
       console.error("Error sending message:", error);
+    } finally {
+      setLoading(false);
     }
     setSent(true);
     setTimeout(() => setSent(false), 4000);
@@ -287,7 +290,7 @@ export function Contact() {
                       className="w-full flex items-center justify-center gap-2 py-3.5 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] text-white font-semibold rounded-xl shadow-xl"
                     >
                       <Send size={16} />
-                      Send Message
+                      {loading ? "Sending..." : "Send Message"}
                     </motion.button>
                   </form>
                 )}
