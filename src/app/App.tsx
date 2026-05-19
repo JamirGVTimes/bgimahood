@@ -1,17 +1,54 @@
-import React, { useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router";
 import { Navbar } from "./components/Navbar.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { SEO } from "./components/SEO.jsx";
-import { AboutPage } from "./pages/AboutPage.jsx";
-import { ContactPage } from "./pages/ContactPage.jsx";
-import { HomePage } from "./pages/HomePage.jsx";
-import { NotFoundPage } from "./pages/NotFoundPage.jsx";
-import { OnlineServicesPage } from "./pages/OnlineServicesPage.jsx";
-import { PortfolioPage } from "./pages/PortfolioPage.jsx";
-import { ServicesPage } from "./pages/ServicesPage.jsx";
-import { SoundEventsPage } from "./pages/SoundEventsPage.jsx";
-import { TeamPage } from "./pages/TeamPage.jsx";
+
+const HomePage = lazy(() =>
+  import("./pages/HomePage.jsx").then((module) => ({
+    default: module.HomePage,
+  })),
+);
+const AboutPage = lazy(() =>
+  import("./pages/AboutPage.jsx").then((module) => ({
+    default: module.AboutPage,
+  })),
+);
+const ServicesPage = lazy(() =>
+  import("./pages/ServicesPage.jsx").then((module) => ({
+    default: module.ServicesPage,
+  })),
+);
+const SoundEventsPage = lazy(() =>
+  import("./pages/SoundEventsPage.jsx").then((module) => ({
+    default: module.SoundEventsPage,
+  })),
+);
+const OnlineServicesPage = lazy(() =>
+  import("./pages/OnlineServicesPage.jsx").then((module) => ({
+    default: module.OnlineServicesPage,
+  })),
+);
+const PortfolioPage = lazy(() =>
+  import("./pages/PortfolioPage.jsx").then((module) => ({
+    default: module.PortfolioPage,
+  })),
+);
+const TeamPage = lazy(() =>
+  import("./pages/TeamPage.jsx").then((module) => ({
+    default: module.TeamPage,
+  })),
+);
+const ContactPage = lazy(() =>
+  import("./pages/ContactPage.jsx").then((module) => ({
+    default: module.ContactPage,
+  })),
+);
+const NotFoundPage = lazy(() =>
+  import("./pages/NotFoundPage.jsx").then((module) => ({
+    default: module.NotFoundPage,
+  })),
+);
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,6 +76,14 @@ function AppRoutes() {
   );
 }
 
+function PageFallback() {
+  return (
+    <div className="min-h-[64vh] bg-[#071921] pt-32 pb-24 flex items-center justify-center">
+      <div className="h-10 w-10 rounded-full border-2 border-[#207BA1]/30 border-t-[#00d4ff] animate-spin" />
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -50,7 +95,9 @@ export default function App() {
         <ScrollToTop />
         <Navbar />
         <main>
-          <AppRoutes />
+          <Suspense fallback={<PageFallback />}>
+            <AppRoutes />
+          </Suspense>
         </main>
         <Footer />
       </div>
