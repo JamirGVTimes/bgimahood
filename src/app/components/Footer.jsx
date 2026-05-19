@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import {
   Facebook,
   Twitter,
@@ -12,24 +13,30 @@ import {
   MapPin,
 } from "lucide-react";
 import bgimaLogo from "../../images/bgimahood_logo.png";
+import { contactDetails } from "../config/site.js";
 
 const links = {
   Services: [
-    "Software Development",
-    "Sound Systems",
-    "Event Management",
-    "URA TIN Registration",
-    "Logbook Transfer",
-    "Tax Filing",
-    "URSB Registration",
+    { label: "Software Development", to: "/services" },
+    { label: "Sound Systems", to: "/sound-and-events" },
+    { label: "Event Management", to: "/sound-and-events" },
+    { label: "URA TIN Registration", to: "/online-services" },
+    { label: "Logbook Transfer", to: "/online-services" },
+    { label: "Tax Filing", to: "/online-services" },
+    { label: "URSB Registration", to: "/online-services" },
   ],
-  Company: ["About Us", "Our Team", "Portfolio", "Blog", "Careers", "Press"],
+  Company: [
+    { label: "About Us", to: "/about" },
+    { label: "Our Team", to: "/team" },
+    { label: "Portfolio", to: "/portfolio" },
+    { label: "Testimonials", to: "/" },
+    { label: "Contact", to: "/contact" },
+  ],
   Support: [
-    "Contact Us",
-    "FAQ",
-    "Privacy Policy",
-    "Terms of Service",
-    "Sitemap",
+    { label: "Contact Us", to: "/contact" },
+    { label: "WhatsApp", href: contactDetails.whatsapp },
+    { label: "Email", href: `mailto:${contactDetails.email}` },
+    { label: "Call Us", href: "tel:+256768683090" },
   ],
 };
 
@@ -59,21 +66,20 @@ export function Footer() {
               </p>
             </div>
             <div className="flex gap-3">
-              <motion.button
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() =>
-                  document
-                    .querySelector("#contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="px-6 py-3 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] text-white font-semibold rounded-full shadow-xl text-sm"
               >
-                Get Free Quote
-              </motion.button>
+                <Link
+                  to="/contact"
+                  className="block px-6 py-3 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] text-white font-semibold rounded-full shadow-xl text-sm"
+                >
+                  Get Free Quote
+                </Link>
+              </motion.div>
               <motion.a
                 whileHover={{ scale: 1.05 }}
-                href="https://wa.me/256768683090?text=Hello%20Bgimahood%20Technologies,%20I%E2%80%99m%20interested%20in%20your%20software%20and%20event%20services."
+                href={contactDetails.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-[#25D366] text-white font-semibold rounded-full shadow-xl text-sm flex items-center gap-2"
@@ -150,14 +156,24 @@ export function Footer() {
                 </div>
                 <ul className="space-y-2.5">
                   {items.map((item) => (
-                    <li key={item}>
-                      <motion.a
-                        href="#"
-                        whileHover={{ x: 3 }}
-                        className="text-gray-400 hover:text-[#207BA1] text-xs transition-colors block"
-                      >
-                        {item}
-                      </motion.a>
+                    <li key={item.label}>
+                      <motion.div whileHover={{ x: 3 }}>
+                        {item.to ? (
+                          <Link
+                            to={item.to}
+                            className="text-gray-400 hover:text-[#207BA1] text-xs transition-colors block"
+                          >
+                            {item.label}
+                          </Link>
+                        ) : (
+                          <a
+                            href={item.href}
+                            className="text-gray-400 hover:text-[#207BA1] text-xs transition-colors block"
+                          >
+                            {item.label}
+                          </a>
+                        )}
+                      </motion.div>
                     </li>
                   ))}
                 </ul>

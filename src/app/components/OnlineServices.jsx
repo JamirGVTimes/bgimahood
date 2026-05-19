@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
+import { useNavigate } from "react-router";
 import {
   FileText,
   Car,
@@ -92,6 +93,7 @@ const steps = [
 ];
 
 export function OnlineServices() {
+  const navigate = useNavigate();
   const ref = React.useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -217,11 +219,7 @@ export function OnlineServices() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() =>
-                  document
-                    .querySelector("#contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => navigate("/contact")}
                 className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#10b981] to-[#00d4ff] text-white text-sm font-semibold rounded-full shadow-lg"
               >
                 Use Our Services <ArrowRight size={14} />

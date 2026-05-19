@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
+import { useNavigate } from "react-router";
 import {
   Code2,
   Globe,
@@ -193,6 +194,7 @@ const serviceCategories = [
 ];
 
 export function Services() {
+  const navigate = useNavigate();
   const ref = React.useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [active, setActive] = useState("software");
@@ -288,11 +290,7 @@ export function Services() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() =>
-                  document
-                    .querySelector("#contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => navigate("/contact")}
                 className="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white"
                 style={{ background: current.color }}
               >

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { useNavigate } from "react-router";
 import { ArrowRight, ChevronDown, Volume2, Speaker, Music } from "lucide-react";
 
 const PARTICLES = Array.from({ length: 30 }, (_, i) => ({
@@ -59,6 +60,7 @@ const ADMARK_PRODUCTS = [
 ];
 
 export function Hero() {
+  const navigate = useNavigate();
   const [wordIndex, setWordIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -95,7 +97,7 @@ export function Hero() {
   }, []);
 
   const scrollDown = () => {
-    document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
+    navigate("/about");
   };
 
   return (
@@ -155,11 +157,7 @@ export function Hero() {
                       boxShadow: "0 0 30px #207BA155",
                     }}
                     whileTap={{ scale: 0.97 }}
-                    onClick={() =>
-                      document
-                        .querySelector("#contact")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
+                    onClick={() => navigate("/contact")}
                     className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#207BA1] to-[#00d4ff] text-white font-semibold rounded-full shadow-xl"
                   >
                     Get a Free Quote <ArrowRight size={16} />
@@ -167,11 +165,7 @@ export function Hero() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.97 }}
-                    onClick={() =>
-                      document
-                        .querySelector("#services")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
+                    onClick={() => navigate("/services")}
                     className="flex items-center gap-2 px-7 py-3.5 border border-white/20 text-white font-semibold rounded-full hover:bg-white/5 transition-colors"
                   >
                     Our Services

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
+import { useNavigate } from "react-router";
 import {
   Music2,
   Mic2,
@@ -80,6 +81,7 @@ const eventTypes = [
 ];
 
 export function EventsSound() {
+  const navigate = useNavigate();
   const ref = React.useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -307,22 +309,14 @@ export function EventsSound() {
                 <motion.button
                   whileHover={{ scale: 1.04, boxShadow: "0 0 25px #a855f755" }}
                   whileTap={{ scale: 0.97 }}
-                  onClick={() =>
-                    document
-                      .querySelector("#contact")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
+                  onClick={() => navigate("/contact")}
                   className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#a855f7] to-[#ec4899] text-white text-sm font-semibold rounded-full shadow-xl"
                 >
                   Book Sound System <ArrowRight size={14} />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.04 }}
-                  onClick={() =>
-                    document
-                      .querySelector("#contact")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
+                  onClick={() => navigate("/contact")}
                   className="flex items-center gap-2 px-6 py-3 border border-[#a855f7]/40 text-[#a855f7] text-sm font-semibold rounded-full"
                 >
                   <MapPin size={14} /> Get Quote
