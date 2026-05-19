@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { useNavigate } from "react-router";
-import { ArrowRight, ChevronDown, Volume2, Speaker, Music } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart3,
+  ChevronDown,
+  Code2,
+  Speaker,
+} from "lucide-react";
 
 const PARTICLES = Array.from({ length: 30 }, (_, i) => ({
   id: i,
@@ -13,49 +19,46 @@ const PARTICLES = Array.from({ length: 30 }, (_, i) => ({
 }));
 
 const TYPED_WORDS = [
-  "Inventory Management Systems",
-  "Payment Gateway Integrations",
-  "Custom Software Solutions",
-  "Cloud-Based Applications",
-  "Microservices APIs",
-  "Progressive Web Apps (PWAs)",
-  "Workflow Automation Systems",
-  "RESTful APIs",
+  "Inventory Systems",
+  "Payment Integrations",
+  "Custom Software",
+  "Cloud Applications",
+  "Microservice APIs",
+  "Progressive Web Apps",
+  "Workflow Automation",
+  "REST APIs",
   "SaaS Platforms",
-  "RealTime Apps",
-  "Digital Solutions",
+  "Real-Time Apps",
+  "Digital Products",
 ];
 
-const ADMARK_PRODUCTS = [
+const HOME_PHOTOS = [
   {
-    id: 1,
-    name: "Admark ADM-15S",
-    type: '15" Subwoofer',
-    power: "1200W Peak",
+    title: "Beautiful Business Dashboard",
+    label: "Live Analytics",
+    description: "Clean reporting interfaces for operations teams",
     image:
-      "https://images.unsplash.com/photo-1645536729519-134e3b7e9e88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
-    badge: "Bass King",
-    color: "#a855f7",
-  },
-  {
-    id: 2,
-    name: "Admark ADM-PA2",
-    type: "Line Array Tower",
-    power: "2000W RMS",
-    image:
-      "https://images.unsplash.com/photo-1634041322596-61ff0de5af09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
-    badge: "Event Pro",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900",
+    icon: <BarChart3 size={16} />,
     color: "#207BA1",
   },
   {
-    id: 3,
-    name: "Admark ADM-C12",
-    type: "Concert Speaker",
-    power: "800W Program",
+    title: "Admark Bass Box",
+    label: "Sound Hire",
+    description: "Deep bass support for events and outdoor functions",
     image:
-      "https://images.unsplash.com/photo-1587817020884-6a2f41f97e38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
-    badge: "Top Seller",
-    color: "#f59e0b",
+      "https://images.unsplash.com/photo-1645536729519-134e3b7e9e88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600",
+    icon: <Speaker size={16} />,
+    color: "#a855f7",
+  },
+  {
+    title: "React Code",
+    label: "Frontend Builds",
+    description: "Modern React interfaces built for speed and scale",
+    image:
+      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600",
+    icon: <Code2 size={16} />,
+    color: "#10b981",
   },
 ];
 
@@ -64,7 +67,6 @@ export function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [admarkIdx, setAdmarkIdx] = useState(0);
 
   useEffect(() => {
     const word = TYPED_WORDS[wordIndex];
@@ -88,14 +90,6 @@ export function Hero() {
     return () => clearTimeout(timeout);
   }, [displayed, isDeleting, wordIndex]);
 
-  useEffect(() => {
-    const t = setInterval(
-      () => setAdmarkIdx((i) => (i + 1) % ADMARK_PRODUCTS.length),
-      3500,
-    );
-    return () => clearInterval(t);
-  }, []);
-
   const scrollDown = () => {
     navigate("/about");
   };
@@ -115,22 +109,22 @@ export function Hero() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.1 }}
-                  className="text-white mb-6"
+                  className="text-white mb-6 max-w-xl text-3xl sm:text-4xl lg:text-5xl"
                   style={{
-                    fontSize: "clamp(2.2rem, 1.6vw, 3.8rem)",
-                    lineHeight: 1.2,
-                    fontWeight: 900,
-                    paddingLeft: "1rem",
-                    borderLeft: "5px solid #207BA1",
+                    lineHeight: 1.15,
+                    fontWeight: 800,
+                    paddingLeft: "0.85rem",
+                    borderLeft: "4px solid #207BA1",
                   }}
                 >
-                  We Craft <br />
-                  <span className="bg-gradient-to-r from-[#207BA1] to-[#00d4ff] bg-clip-text text-transparent">
-                    {displayed}
-                    <span className="animate-pulse">|</span>
+                  <span className="block">
+                    We Build{" "}
+                    <span className="inline-block min-h-[1.1em] text-[#00d4ff]">
+                      {displayed}
+                      <span className="animate-pulse">|</span>
+                    </span>
                   </span>
-                  <br />
-                  <span>that transform Organizations</span>
+                  <span className="block text-white/90">For Modern Teams</span>
                 </motion.h1>
 
                 <motion.p
@@ -196,81 +190,53 @@ export function Hero() {
                 </motion.div>
               </div>
 
-              {/* Right — Floating Cards with VS Code + Admark */}
+              {/* Right — Home photo showcase */}
               <motion.div
                 initial={{ opacity: 0, x: 60 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.2 }}
-                className="relative hidden lg:block h-[520px]"
+                className="relative grid grid-cols-1 sm:grid-cols-2 gap-4"
               >
-                {/* VS Code screenshot top */}
-                <motion.div
-                  animate={{ y: [0, -12, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute top-1 right-0 w-[340px] h-[220px] rounded-2xl overflow-hidden shadow-2xl border border-white/10"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1607431067517-fda93b3e0aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600"
-                    alt="VS Code Development"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#020818]/80 to-transparent" />
-                  <div className="absolute bottom-4 left-4 flex items-center gap-2">
-                    <div className="w-6 h-6 bg-[#207BA1] rounded flex items-center justify-center">
-                      <span className="text-white text-[10px] font-black">
-                        VS
+                {HOME_PHOTOS.map((photo, index) => (
+                  <motion.div
+                    key={photo.title}
+                    animate={{ y: [0, index === 1 ? 10 : -10, 0] }}
+                    transition={{
+                      duration: 5 + index,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: index * 0.5,
+                    }}
+                    whileHover={{ y: -6, scale: 1.01 }}
+                    className={`relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl group ${
+                      index === 0
+                        ? "h-64 sm:col-span-2 lg:h-72"
+                        : "h-52 lg:h-56"
+                    }`}
+                  >
+                    <img
+                      src={photo.image}
+                      alt={photo.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#020818]/95 via-[#020818]/35 to-transparent" />
+                    <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full bg-black/55 border border-white/15 px-3 py-1.5 backdrop-blur-sm">
+                      <span style={{ color: photo.color }}>{photo.icon}</span>
+                      <span className="text-white text-xs font-semibold">
+                        {photo.label}
                       </span>
                     </div>
-                    <span className="text-white font-semibold text-sm">
-                      VS Code · React Dev
-                    </span>
-                  </div>
-                </motion.div>
-
-                {/* Admark speaker bottom left */}
-                <motion.div
-                  animate={{ y: [0, 12, 0] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1.5,
-                  }}
-                  className="absolute bottom-12 left-0 w-[260px] h-[190px] rounded-2xl overflow-hidden shadow-2xl border border-[#a855f7]/30"
-                >
-                  <AnimatePresence mode="wait">
-                    <motion.img
-                      key={admarkIdx}
-                      src={ADMARK_PRODUCTS[admarkIdx].image}
-                      alt={ADMARK_PRODUCTS[admarkIdx].name}
-                      className="w-full h-full object-cover"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.6 }}
-                    />
-                  </AnimatePresence>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#020818]/90 to-transparent" />
-                  <div className="absolute top-3 left-3 px-2 py-1 bg-black/60 rounded-full border border-white/20">
-                    <span className="text-white font-black text-[10px] tracking-widest">
-                      ADMARK
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 left-4">
-                    <div className="text-white font-semibold text-sm">
-                      {ADMARK_PRODUCTS[admarkIdx].name}
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="text-white font-bold text-base mb-1">
+                        {photo.title}
+                      </div>
+                      <div className="text-gray-300 text-xs leading-relaxed max-w-sm">
+                        {photo.description}
+                      </div>
                     </div>
-                    <div className="text-[#a855f7] text-xs">
-                      {ADMARK_PRODUCTS[admarkIdx].power}
-                    </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                ))}
 
-                {/* Floating badge */}
                 <motion.div
                   animate={{ scale: [1, 1.05, 1], rotate: [0, 2, -2, 0] }}
                   transition={{
@@ -279,16 +245,10 @@ export function Hero() {
                     ease: "easeInOut",
                     delay: 2,
                   }}
-                  className="absolute top-1/2 right-[-20px] bg-gradient-to-br from-[#207BA1] to-[#00d4ff] text-white text-xs font-bold px-4 py-3 rounded-2xl shadow-2xl"
+                  className="absolute -right-3 top-1/2 bg-gradient-to-br from-[#207BA1] to-[#00d4ff] text-white text-xs font-bold px-4 py-3 rounded-2xl shadow-2xl"
                 >
-                  <div className="text-sm font-medium">✓ Certified Company</div>
+                  <div className="text-sm font-medium">Visual Tech Partner</div>
                 </motion.div>
-
-                {/* Glow ring */}
-                <div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-[#207BA1]/20 animate-ping"
-                  style={{ animationDuration: "3s" }}
-                />
               </motion.div>
             </div>
           </div>

@@ -53,7 +53,7 @@ function upsertJsonLd(page, canonicalUrl) {
     name: SITE_NAME,
     url: "https://bgimahood.com/",
     logo: "https://bgimahood.com/bgimahood_logo.png",
-    image: DEFAULT_OG_IMAGE,
+    image: page.ogImage || DEFAULT_OG_IMAGE,
     description: page.description,
     telephone: contactDetails.phone,
     email: contactDetails.email,
@@ -84,6 +84,7 @@ function upsertJsonLd(page, canonicalUrl) {
     url: canonicalUrl,
     name: page.title,
     description: page.description,
+    image: page.ogImage || DEFAULT_OG_IMAGE,
     isPartOf: {
       "@type": "WebSite",
       "@id": "https://bgimahood.com/#website",
@@ -108,6 +109,7 @@ export function SEO() {
   useEffect(() => {
     const page = getPageByPath(location.pathname);
     const canonicalUrl = getCanonicalUrl(page.path);
+    const ogImage = page.ogImage || DEFAULT_OG_IMAGE;
     const isNotFound = page.path === "/404";
 
     document.title = page.title;
@@ -126,12 +128,14 @@ export function SEO() {
     upsertMeta("property", "og:description", page.description);
     upsertMeta("property", "og:type", "website");
     upsertMeta("property", "og:url", canonicalUrl);
-    upsertMeta("property", "og:image", DEFAULT_OG_IMAGE);
+    upsertMeta("property", "og:image", ogImage);
+    upsertMeta("property", "og:image:width", "1536");
+    upsertMeta("property", "og:image:height", "1024");
 
     upsertMeta("name", "twitter:card", "summary_large_image");
     upsertMeta("name", "twitter:title", page.title);
     upsertMeta("name", "twitter:description", page.description);
-    upsertMeta("name", "twitter:image", DEFAULT_OG_IMAGE);
+    upsertMeta("name", "twitter:image", ogImage);
 
     upsertCanonical(canonicalUrl);
     upsertJsonLd(page, canonicalUrl);
