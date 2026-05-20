@@ -3,6 +3,7 @@ import { useLocation } from "react-router";
 import {
   DEFAULT_OG_IMAGE,
   SITE_NAME,
+  SITE_URL,
   contactDetails,
   getCanonicalUrl,
   getPageByPath,
@@ -49,10 +50,10 @@ function upsertJsonLd(page, canonicalUrl) {
   const organization = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://bgimahood.com/#organization",
+    "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
-    url: "https://bgimahood.com/",
-    logo: "https://bgimahood.com/bgimahood_logo.png",
+    url: `${SITE_URL}/`,
+    logo: `${SITE_URL}/bgimahood_logo.png`,
     image: page.ogImage || DEFAULT_OG_IMAGE,
     description: page.description,
     telephone: contactDetails.phone,
@@ -87,9 +88,9 @@ function upsertJsonLd(page, canonicalUrl) {
     image: page.ogImage || DEFAULT_OG_IMAGE,
     isPartOf: {
       "@type": "WebSite",
-      "@id": "https://bgimahood.com/#website",
+      "@id": `${SITE_URL}/#website`,
       name: SITE_NAME,
-      url: "https://bgimahood.com/",
+      url: `${SITE_URL}/`,
     },
   };
 
@@ -129,6 +130,8 @@ export function SEO() {
     upsertMeta("property", "og:type", "website");
     upsertMeta("property", "og:url", canonicalUrl);
     upsertMeta("property", "og:image", ogImage);
+    upsertMeta("property", "og:image:secure_url", ogImage);
+    upsertMeta("property", "og:image:type", "image/png");
     upsertMeta("property", "og:image:width", "1536");
     upsertMeta("property", "og:image:height", "1024");
 

@@ -1,6 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import {
+  SITE_URL,
   SITE_NAME,
   getCanonicalUrl,
   navLinks,
@@ -63,6 +64,8 @@ function routeHtml(page) {
   html = setMeta(html, "property", "og:type", "website");
   html = setMeta(html, "property", "og:url", canonical);
   html = setMeta(html, "property", "og:image", image);
+  html = setMeta(html, "property", "og:image:secure_url", image);
+  html = setMeta(html, "property", "og:image:type", "image/png");
   html = setMeta(html, "property", "og:image:width", "1536");
   html = setMeta(html, "property", "og:image:height", "1024");
 
@@ -73,6 +76,28 @@ function routeHtml(page) {
 
   return html;
 }
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${navLinks
+  .map(
+    (page) => `  <url>
+    <loc>${getCanonicalUrl(page.path)}</loc>
+    <lastmod>${new Date().toISOString().slice(0, 10)}</lastmod>
+    <changefreq>${page.path === "/" ? "weekly" : "monthly"}</changefreq>
+    <priority>${page.path === "/" ? "1.0" : "0.8"}</priority>
+  </url>`,
+  )
+  .join("\n")}
+</urlset>
+`;
+
+writeFileSync(path.join(distDir, "robots.txt"), `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`, "utf8");
+writeFileSync(path.join(distDir, "sitemap.xml"), sitemap, "utf8");
 
 for (const page of navLinks) {
   const html = routeHtml(page);

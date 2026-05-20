@@ -1,4 +1,20 @@
-export const SITE_URL = "https://bgimahood.com";
+function getEnvValue(key) {
+  const viteEnv =
+    typeof import.meta !== "undefined" && import.meta.env
+      ? import.meta.env
+      : {};
+  const nodeEnv = typeof process !== "undefined" ? process.env : {};
+
+  return viteEnv[key] || nodeEnv[key] || "";
+}
+
+function normalizeSiteUrl(url) {
+  return url.replace(/\/+$/, "");
+}
+
+export const SITE_URL = normalizeSiteUrl(
+  getEnvValue("VITE_SITE_URL") || "https://bgimahood.com",
+);
 export const SITE_NAME = "Bgimahood Technologies";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og/home.png`;
 
