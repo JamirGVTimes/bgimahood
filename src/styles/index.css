@@ -30,3 +30,96 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #207ba1;
 }
+
+.booking-ant-form .ant-form-item {
+  margin-bottom: 16px;
+}
+
+.booking-ant-form .ant-form-item-label > label {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.booking-ant-form .ant-input,
+.booking-ant-form .ant-input-number,
+.booking-ant-form .ant-picker,
+.booking-ant-form .ant-select-selector {
+  box-shadow: none !important;
+}
+
+.booking-ant-form .ant-input:hover,
+.booking-ant-form .ant-input:focus,
+.booking-ant-form .ant-input-number:hover,
+.booking-ant-form .ant-input-number-focused,
+.booking-ant-form .ant-picker:hover,
+.booking-ant-form .ant-picker-focused,
+.booking-ant-form .ant-select-focused .ant-select-selector,
+.booking-ant-form .ant-select-selector:hover {
+  border-color: rgba(168, 85, 247, 0.65) !important;
+}
+
+.booking-ant-form .ant-input-prefix,
+.booking-ant-form .ant-picker-suffix,
+.booking-ant-form .ant-select-arrow,
+.booking-ant-form .ant-input-number-handler-wrap {
+  color: #9ca3af;
+}
+
+.booking-ant-form .ant-input-number-input,
+.booking-ant-form .ant-picker-input > input,
+.booking-ant-form .ant-select-selection-item,
+.booking-ant-form textarea.ant-input {
+  color: #ffffff;
+}
+
+.booking-ant-form .ant-form-item-explain-error {
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.booking-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  background: linear-gradient(90deg, #a855f7, #ec4899) !important;
+  border: 0 !important;
+  font-weight: 700;
+  box-shadow: 0 16px 36px rgba(168, 85, 247, 0.22);
+}
+
+.booking-submit-button:hover {
+  filter: brightness(1.06);
+}
+
+.ant-select-dropdown,
+.ant-picker-dropdown .ant-picker-panel-container {
+  background: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ant-select-item,
+.ant-picker-dropdown,
+.ant-picker-cell,
+.ant-picker-header,
+.ant-picker-content th {
+  color: #d1d5db !important;
+}
+
+.ant-picker-cell-in-view {
+  color: #f9fafb !important;
+}
+
+.ant-picker-cell-disabled {
+  color: #4b5563 !important;
+}
+
+.ant-picker-header button {
+  color: #f9fafb !important;
+}
+
+.ant-picker-cell-selected .ant-picker-cell-inner {
+  background: #a855f7 !important;
+}

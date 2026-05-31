@@ -61,14 +61,14 @@ export const pages = [
     nav: true,
   },
   {
-    label: "Sound & Events",
-    path: "/sound-and-events",
-    title: "Sound System Hire & Event Management Uganda | Bgimahood",
+    label: "Booking",
+    path: "/booking",
+    title: "Book a Sound System or Event Management now | Bgimahood",
     description:
       "Hire professional Admark sound systems and event management support for weddings, corporate events, concerts, church services, and outdoor functions in Uganda.",
     keywords:
       "sound system hire Uganda, Admark speakers Uganda, event management Kampala, wedding sound hire, corporate event sound",
-    ogImage: `${SITE_URL}/og/sound-and-events.jpg`,
+    ogImage: `${SITE_URL}/og/booking.jpg`,
     nav: true,
   },
   {

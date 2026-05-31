@@ -18,8 +18,8 @@ import { contactDetails } from "../config/site.js";
 const links = {
   Services: [
     { label: "Software Development", to: "/services" },
-    { label: "Sound Systems", to: "/sound-and-events" },
-    { label: "Event Management", to: "/sound-and-events" },
+    { label: "Sound Systems", to: "/booking" },
+    { label: "Event Management", to: "/booking" },
     { label: "URA TIN Registration", to: "/online-services" },
     { label: "Logbook Transfer", to: "/online-services" },
     { label: "Tax Filing", to: "/online-services" },

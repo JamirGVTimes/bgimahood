@@ -49,8 +49,8 @@ const routes = [
     accent: "#10b981",
   },
   {
-    slug: "sound-and-events",
-    title: "SOUND & EVENTS",
+    slug: "booking",
+    title: "BOOKING",
     eyebrow: "ADMARK BASS • WEDDINGS • CORPORATE EVENTS",
     description:
       "Professional sound systems and event management for weddings, concerts, conferences, and outdoor functions.",

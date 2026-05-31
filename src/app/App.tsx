@@ -19,9 +19,9 @@ const ServicesPage = lazy(() =>
     default: module.ServicesPage,
   })),
 );
-const SoundEventsPage = lazy(() =>
-  import("./pages/SoundEventsPage.jsx").then((module) => ({
-    default: module.SoundEventsPage,
+const BookingPage = lazy(() =>
+  import("./pages/BookingPage.jsx").then((module) => ({
+    default: module.BookingPage,
   })),
 );
 const OnlineServicesPage = lazy(() =>
@@ -66,7 +66,7 @@ function AppRoutes() {
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/services" element={<ServicesPage />} />
-      <Route path="/sound-and-events" element={<SoundEventsPage />} />
+      <Route path="/booking" element={<BookingPage />} />
       <Route path="/online-services" element={<OnlineServicesPage />} />
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/team" element={<TeamPage />} />
