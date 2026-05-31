@@ -16,7 +16,7 @@ export const SITE_URL = normalizeSiteUrl(
   getEnvValue("VITE_SITE_URL") || "https://bgimahood.com",
 );
 export const SITE_NAME = "Bgimahood Technologies";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og/home.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og/home.jpg`;
 
 export const contactDetails = {
   phone: "+256 768 683 090",
@@ -35,7 +35,7 @@ export const pages = [
       "Bgimahood Technologies is a Uganda-based technology company offering custom software development, sound systems, event management, and online government services.",
     keywords:
       "Bgimahood Technologies, software development Uganda, sound system hire Uganda, event management Kampala, URA TIN registration, URSB registration",
-    ogImage: `${SITE_URL}/og/home.png`,
+    ogImage: `${SITE_URL}/og/home.jpg`,
     nav: true,
   },
   {
@@ -46,7 +46,7 @@ export const pages = [
       "Learn about Bgimahood Technologies, a registered Ugandan company delivering software, events, sound systems, and government online service support since 2022.",
     keywords:
       "about Bgimahood Technologies, Uganda technology company, Kampala software company, registered company Uganda",
-    ogImage: `${SITE_URL}/og/about.png`,
+    ogImage: `${SITE_URL}/og/about.jpg`,
     nav: true,
   },
   {
@@ -57,7 +57,7 @@ export const pages = [
       "Explore Bgimahood Technologies services including web applications, SaaS platforms, APIs, portals, workflow automation, sound systems, events, and e-government support.",
     keywords:
       "software services Uganda, web app development Kampala, SaaS development Uganda, API development, workflow automation Uganda",
-    ogImage: `${SITE_URL}/og/services.png`,
+    ogImage: `${SITE_URL}/og/services.jpg`,
     nav: true,
   },
   {
@@ -68,7 +68,7 @@ export const pages = [
       "Hire professional Admark sound systems and event management support for weddings, corporate events, concerts, church services, and outdoor functions in Uganda.",
     keywords:
       "sound system hire Uganda, Admark speakers Uganda, event management Kampala, wedding sound hire, corporate event sound",
-    ogImage: `${SITE_URL}/og/sound-and-events.png`,
+    ogImage: `${SITE_URL}/og/sound-and-events.jpg`,
     nav: true,
   },
   {
@@ -79,7 +79,7 @@ export const pages = [
       "Fast assistance with URA TIN registration, tax returns, vehicle logbook transfers, URSB company registration, NIRA, NSSF, and other online services in Uganda.",
     keywords:
       "URA TIN registration Uganda, tax return filing Uganda, logbook transfer Uganda, URSB company registration, NIRA services",
-    ogImage: `${SITE_URL}/og/online-services.png`,
+    ogImage: `${SITE_URL}/og/online-services.jpg`,
     nav: true,
   },
   {
@@ -90,7 +90,7 @@ export const pages = [
       "View selected software, portal, SaaS, real-time application, and event technology projects delivered by Bgimahood Technologies in Uganda and East Africa.",
     keywords:
       "Bgimahood portfolio, software projects Uganda, web app portfolio, SaaS projects Uganda, digital projects Kampala",
-    ogImage: `${SITE_URL}/og/portfolio.png`,
+    ogImage: `${SITE_URL}/og/portfolio.jpg`,
     nav: true,
   },
   {
@@ -101,7 +101,7 @@ export const pages = [
       "Meet the developers, designers, event specialists, and online service experts behind Bgimahood Technologies in Uganda.",
     keywords:
       "Bgimahood team, software developers Uganda, event specialists Kampala, technology team Uganda",
-    ogImage: `${SITE_URL}/og/team.png`,
+    ogImage: `${SITE_URL}/og/team.jpg`,
     nav: true,
   },
   {
@@ -112,7 +112,7 @@ export const pages = [
       "Contact Bgimahood Technologies in Kampala, Uganda for software development, sound system hire, event management, and online government service support.",
     keywords:
       "contact Bgimahood Technologies, software quote Uganda, sound hire quote Kampala, event management quote, Bgimahood phone",
-    ogImage: `${SITE_URL}/og/contact.png`,
+    ogImage: `${SITE_URL}/og/contact.jpg`,
     nav: true,
   },
 ];

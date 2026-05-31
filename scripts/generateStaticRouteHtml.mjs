@@ -65,9 +65,9 @@ function routeHtml(page) {
   html = setMeta(html, "property", "og:url", canonical);
   html = setMeta(html, "property", "og:image", image);
   html = setMeta(html, "property", "og:image:secure_url", image);
-  html = setMeta(html, "property", "og:image:type", "image/png");
-  html = setMeta(html, "property", "og:image:width", "1536");
-  html = setMeta(html, "property", "og:image:height", "1024");
+  html = setMeta(html, "property", "og:image:type", "image/jpeg");
+  html = setMeta(html, "property", "og:image:width", "1200");
+  html = setMeta(html, "property", "og:image:height", "630");
 
   html = setMeta(html, "name", "twitter:card", "summary_large_image");
   html = setMeta(html, "name", "twitter:title", page.title);

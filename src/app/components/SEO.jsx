@@ -131,9 +131,9 @@ export function SEO() {
     upsertMeta("property", "og:url", canonicalUrl);
     upsertMeta("property", "og:image", ogImage);
     upsertMeta("property", "og:image:secure_url", ogImage);
-    upsertMeta("property", "og:image:type", "image/png");
-    upsertMeta("property", "og:image:width", "1536");
-    upsertMeta("property", "og:image:height", "1024");
+    upsertMeta("property", "og:image:type", "image/jpeg");
+    upsertMeta("property", "og:image:width", "1200");
+    upsertMeta("property", "og:image:height", "630");
 
     upsertMeta("name", "twitter:card", "summary_large_image");
     upsertMeta("name", "twitter:title", page.title);
