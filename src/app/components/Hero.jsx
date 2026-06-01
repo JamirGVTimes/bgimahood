@@ -135,8 +135,8 @@ export function Hero() {
                   style={{ lineHeight: 1.5 }}
                 >
                   BGIMAHOOD TECHNOLOGIES — your all-in-one technology partner
-                  for software development, sound systems, event management, and
-                  government online services across Uganda.
+                  for software development, software products, sound systems,
+                  and event management across Uganda.
                 </motion.p>
 
                 <motion.div

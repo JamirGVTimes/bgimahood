@@ -30,11 +30,11 @@ export const pages = [
   {
     label: "Home",
     path: "/",
-    title: "Bgimahood Technologies | Software, Events & Online Services Uganda",
+    title: "Bgimahood Technologies | Software, Events & Sound Systems Uganda",
     description:
-      "Bgimahood Technologies is a Uganda-based technology company offering custom software development, sound systems, event management, and online government services.",
+      "Bgimahood Technologies is a Uganda-based technology company offering custom software development, software products, sound systems, and event management.",
     keywords:
-      "Bgimahood Technologies, software development Uganda, sound system hire Uganda, event management Kampala, URA TIN registration, URSB registration",
+      "Bgimahood Technologies, software development Uganda, software products Uganda, sound system hire Uganda, event management Kampala",
     ogImage: `${SITE_URL}/og/home.jpg`,
     nav: true,
   },
@@ -43,7 +43,7 @@ export const pages = [
     path: "/about",
     title: "About Bgimahood Technologies | Uganda Technology Company",
     description:
-      "Learn about Bgimahood Technologies, a registered Ugandan company delivering software, events, sound systems, and government online service support since 2022.",
+      "Learn about Bgimahood Technologies, a registered Ugandan company delivering software products, events, and sound systems since 2022.",
     keywords:
       "about Bgimahood Technologies, Uganda technology company, Kampala software company, registered company Uganda",
     ogImage: `${SITE_URL}/og/about.jpg`,
@@ -54,7 +54,7 @@ export const pages = [
     path: "/services",
     title: "Software & Digital Services in Uganda | Bgimahood Technologies",
     description:
-      "Explore Bgimahood Technologies services including web applications, SaaS platforms, APIs, portals, workflow automation, sound systems, events, and e-government support.",
+      "Explore Bgimahood Technologies services including web applications, SaaS platforms, APIs, portals, workflow automation, sound systems, and events.",
     keywords:
       "software services Uganda, web app development Kampala, SaaS development Uganda, API development, workflow automation Uganda",
     ogImage: `${SITE_URL}/og/services.jpg`,
@@ -62,35 +62,24 @@ export const pages = [
   },
   {
     label: "Booking",
-    path: "/booking",
+    path: "/book-sound-system",
     title: "Book a Sound System or Event Management now | Bgimahood",
     description:
-      "Hire professional Admark sound systems and event management support for weddings, corporate events, concerts, church services, and outdoor functions in Uganda.",
+      "Hire professional sound systems and event management support for weddings, corporate events, concerts, School parties, church services, and outdoor functions in Uganda.",
     keywords:
-      "sound system hire Uganda, Admark speakers Uganda, event management Kampala, wedding sound hire, corporate event sound",
+      "sound system hire Uganda, speakers Uganda, event management Kampala, wedding sound hire, corporate event sound",
     ogImage: `${SITE_URL}/og/booking.jpg`,
     nav: true,
   },
   {
-    label: "Online Services",
-    path: "/online-services",
-    title: "URA, URSB, NIRA & Online Government Services Uganda | Bgimahood",
+    label: "Products",
+    path: "/products",
+    title: "Products | Software Platforms by Bgimahood Technologies",
     description:
-      "Fast assistance with URA TIN registration, tax returns, vehicle logbook transfers, URSB company registration, NIRA, NSSF, and other online services in Uganda.",
+      "Explore Bgimahood Technologies software products, APIs, dashboards, integrations, and platforms built with React, Next.js, Node.js, MongoDB, and Firebase.",
     keywords:
-      "URA TIN registration Uganda, tax return filing Uganda, logbook transfer Uganda, URSB company registration, NIRA services",
-    ogImage: `${SITE_URL}/og/online-services.jpg`,
-    nav: true,
-  },
-  {
-    label: "Portfolio",
-    path: "/portfolio",
-    title: "Portfolio | Web Apps, SaaS & Digital Projects by Bgimahood",
-    description:
-      "View selected software, portal, SaaS, real-time application, and event technology projects delivered by Bgimahood Technologies in Uganda and East Africa.",
-    keywords:
-      "Bgimahood portfolio, software projects Uganda, web app portfolio, SaaS projects Uganda, digital projects Kampala",
-    ogImage: `${SITE_URL}/og/portfolio.jpg`,
+      "software products Uganda, API development Uganda, React developer Kampala, Node.js APIs Uganda, Next.js apps, MongoDB Firebase software",
+    ogImage: `${SITE_URL}/og/products.jpg`,
     nav: true,
   },
   {
@@ -98,7 +87,7 @@ export const pages = [
     path: "/team",
     title: "Our Team | Bgimahood Technologies Uganda",
     description:
-      "Meet the developers, designers, event specialists, and online service experts behind Bgimahood Technologies in Uganda.",
+      "Meet the developers, designers, product specialists, and event experts behind Bgimahood Technologies in Uganda.",
     keywords:
       "Bgimahood team, software developers Uganda, event specialists Kampala, technology team Uganda",
     ogImage: `${SITE_URL}/og/team.jpg`,
@@ -109,9 +98,9 @@ export const pages = [
     path: "/contact",
     title: "Contact Bgimahood Technologies | Free Quote in Uganda",
     description:
-      "Contact Bgimahood Technologies in Kampala, Uganda for software development, sound system hire, event management, and online government service support.",
+      "Contact Bgimahood Technologies in Kampala, Uganda for software development, software products, sound system hire, and event management.",
     keywords:
-      "contact Bgimahood Technologies, software quote Uganda, sound hire quote Kampala, event management quote, Bgimahood phone",
+      "contact Bgimahood Technologies, software quote Uganda, website development, Web app development, Software Engineers, Full-stack Developers, sound hire quote Kampala, sound engineers, event management quote, Bgimahood phone",
     ogImage: `${SITE_URL}/og/contact.jpg`,
     nav: true,
   },

@@ -66,9 +66,9 @@ function upsertJsonLd(page, canonicalUrl) {
     areaServed: ["Uganda", "East Africa"],
     makesOffer: [
       "Software Development",
+      "Software Products",
       "Sound System Hire",
       "Event Management",
-      "Online Government Services",
     ].map((name) => ({
       "@type": "Offer",
       itemOffered: {

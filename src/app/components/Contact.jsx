@@ -45,12 +45,9 @@ const contactInfo = [
 
 const services = [
   "Software Development",
+  "Software Products",
   "Sound System Hire",
   "Event Management",
-  "URA TIN Registration",
-  "Logbook Transfer",
-  "Tax Return Filing",
-  "URSB Registration",
   "Other",
 ];
 

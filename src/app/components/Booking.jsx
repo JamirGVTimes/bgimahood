@@ -18,6 +18,7 @@ import {
   Headphones,
   ArrowRight,
   CalendarCheck2,
+  Check,
   MapPin,
 } from "lucide-react";
 import { contactDetails } from "../config/site.js";
@@ -145,246 +146,257 @@ export function Booking() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-4xl mx-auto mb-12"
-          >
-            <ConfigProvider
-              theme={{
-                token: {
-                  colorPrimary: "#a855f7",
-                  borderRadius: 12,
-                  colorText: "#ffffff",
-                  colorTextPlaceholder: "#8b93a7",
-                  colorBgContainer: "rgba(255, 255, 255, 0.06)",
-                  colorBorder: "rgba(255, 255, 255, 0.14)",
-                  controlHeight: 44,
-                  fontFamily: "Inter, Segoe UI, sans-serif",
-                },
-                components: {
-                  DatePicker: {
-                    colorBgElevated: "#111827",
+          <div className="grid lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)] gap-8 xl:gap-10 items-start">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.1 }}
+            >
+              <ConfigProvider
+                theme={{
+                  token: {
+                    colorPrimary: "#a855f7",
+                    borderRadius: 12,
                     colorText: "#ffffff",
-                    colorTextHeading: "#ffffff",
-                    colorIcon: "#ffffff",
+                    colorTextPlaceholder: "#8b93a7",
+                    colorBgContainer: "rgba(255, 255, 255, 0.06)",
+                    colorBorder: "rgba(255, 255, 255, 0.14)",
+                    controlHeight: 44,
+                    fontFamily: "Inter, Segoe UI, sans-serif",
                   },
-                  Select: {
-                    optionSelectedBg: "rgba(168, 85, 247, 0.24)",
-                    optionActiveBg: "rgba(255, 255, 255, 0.08)",
-                    colorBgElevated: "#111827",
+                  components: {
+                    DatePicker: {
+                      colorBgElevated: "#111827",
+                      colorText: "#ffffff",
+                      colorTextHeading: "#ffffff",
+                      colorIcon: "#ffffff",
+                    },
+                    Select: {
+                      optionSelectedBg: "rgba(168, 85, 247, 0.24)",
+                      optionActiveBg: "rgba(255, 255, 255, 0.08)",
+                      colorBgElevated: "#111827",
+                    },
                   },
-                },
-              }}
-            >
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6">
-                <div className="flex items-start justify-between gap-4 mb-5">
-                  <div>
-                    <h3 className="text-white font-bold text-xl mb-1">
-                      Make a Booking
-                    </h3>
-                    <p className="text-gray-500 text-xs">
-                      Share your event details and we will confirm availability.
-                    </p>
-                  </div>
-                  <div className="w-10 h-10 rounded-xl bg-[#a855f7]/20 flex items-center justify-center shrink-0 text-[#a855f7]">
-                    <CalendarCheck2 size={18} />
-                  </div>
-                </div>
-
-                <Form
-                  form={form}
-                  layout="vertical"
-                  requiredMark={false}
-                  onFinish={handleBookingSubmit}
-                  className="booking-ant-form"
-                >
-                  <div className="grid sm:grid-cols-2 gap-x-4">
-                    <Form.Item
-                      label="Full name"
-                      name="name"
-                      rules={[
-                        { required: true, message: "Enter your full name" },
-                      ]}
-                    >
-                      <Input placeholder="Your name" />
-                    </Form.Item>
-
-                    <Form.Item
-                      label="Phone / WhatsApp"
-                      name="phone"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Enter your phone number",
-                        },
-                      ]}
-                    >
-                      <Input placeholder="+256 7XX XXX XXX" />
-                    </Form.Item>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-x-4">
-                    <Form.Item
-                      label="Service"
-                      name="service"
-                      rules={[{ required: true, message: "Select a service" }]}
-                    >
-                      <Select
-                        placeholder="Choose service"
-                        options={serviceOptions.map((service) => ({
-                          label: service,
-                          value: service,
-                        }))}
-                      />
-                    </Form.Item>
-
-                    <Form.Item
-                      label="Event type"
-                      name="eventType"
-                      rules={[{ required: true, message: "Select event type" }]}
-                    >
-                      <Select
-                        placeholder="Choose event"
-                        options={eventTypes.map((eventType) => ({
-                          label: eventType,
-                          value: eventType,
-                        }))}
-                      />
-                    </Form.Item>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-x-4">
-                    <Form.Item
-                      label="Event date"
-                      name="eventDate"
-                      rules={[{ required: true, message: "Select event date" }]}
-                    >
-                      <DatePicker
-                        className="w-full"
-                        format="DD MMM YYYY"
-                        placeholder="Select date"
-                      />
-                    </Form.Item>
-
-                    <Form.Item label="Expected guests" name="guestCount">
-                      <InputNumber
-                        className="w-full"
-                        min={1}
-                        placeholder="e.g. 150"
-                      />
-                    </Form.Item>
-                  </div>
-
-                  <Form.Item
-                    label="Event location"
-                    name="location"
-                    rules={[
-                      { required: true, message: "Enter event location" },
-                    ]}
-                  >
-                    <Input
-                      prefix={<MapPin size={14} className="text-gray-500" />}
-                      placeholder="Venue, district, or town"
-                    />
-                  </Form.Item>
-
-                  <Form.Item label="Budget range" name="budget">
-                    <Select
-                      placeholder="Select budget range"
-                      options={budgetOptions.map((budget) => ({
-                        label: budget,
-                        value: budget,
-                      }))}
-                    />
-                  </Form.Item>
-
-                  <Form.Item label="Extra notes" name="notes">
-                    <Input.TextArea
-                      rows={3}
-                      placeholder="Tell us about stage size, power access, timing, or special requests..."
-                    />
-                  </Form.Item>
-
-                  <Button
-                    type="primary"
-                    htmlType="submit"
-                    size="large"
-                    block
-                    className="booking-submit-button"
-                  >
-                    Book Now <ArrowRight size={14} />
-                  </Button>
-                  <a
-                    href={contactDetails.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 flex items-center justify-center gap-2 text-[#a855f7] text-xs font-semibold hover:text-[#ec4899] transition-colors"
-                  >
-                    Prefer direct WhatsApp? Message us
-                  </a>
-                </Form>
-              </div>
-            </ConfigProvider>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.2 }}
-            >
-              <h3 className="text-white font-bold text-xl mb-5">
-                Our Equipment Fleet
-              </h3>
-              <div className="grid grid-cols-1 gap-3">
-                {equipment.map((eq, i) => (
-                  <motion.div
-                    key={eq.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ delay: 0.3 + i * 0.1 }}
-                    whileHover={{ x: 4 }}
-                    className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 hover:border-[#a855f7]/40 transition-all"
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-[#a855f7]/20 flex items-center justify-center shrink-0">
-                      <span className="text-[#a855f7]">{eq.icon}</span>
-                    </div>
+                }}
+              >
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6">
+                  <div className="flex items-start justify-between gap-4 mb-5">
                     <div>
-                      <div className="text-white text-sm font-semibold">
-                        {eq.name}
-                      </div>
-                      <div className="text-gray-500 text-xs">{eq.desc}</div>
+                      <h3 className="text-white font-bold text-xl mb-1">
+                        Make a Booking
+                      </h3>
+                      <p className="text-gray-500 text-xs">
+                        Share your event details and we will confirm
+                        availability.
+                      </p>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
+                    <div className="w-10 h-10 rounded-xl bg-[#a855f7]/20 flex items-center justify-center shrink-0 text-[#a855f7]">
+                      <CalendarCheck2 size={18} />
+                    </div>
+                  </div>
+
+                  <Form
+                    form={form}
+                    layout="vertical"
+                    requiredMark={false}
+                    onFinish={handleBookingSubmit}
+                    className="booking-ant-form"
+                  >
+                    <div className="grid sm:grid-cols-2 gap-x-4">
+                      <Form.Item
+                        label="Full name"
+                        name="name"
+                        rules={[
+                          { required: true, message: "Enter your full name" },
+                        ]}
+                      >
+                        <Input placeholder="Your name" />
+                      </Form.Item>
+
+                      <Form.Item
+                        label="Phone / WhatsApp"
+                        name="phone"
+                        rules={[
+                          {
+                            required: true,
+                            message: "Enter your phone number",
+                          },
+                        ]}
+                      >
+                        <Input placeholder="+256 7XX XXX XXX" />
+                      </Form.Item>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 gap-x-4">
+                      <Form.Item
+                        label="Service"
+                        name="service"
+                        rules={[
+                          { required: true, message: "Select a service" },
+                        ]}
+                      >
+                        <Select
+                          placeholder="Choose service"
+                          options={serviceOptions.map((service) => ({
+                            label: service,
+                            value: service,
+                          }))}
+                        />
+                      </Form.Item>
+
+                      <Form.Item
+                        label="Event type"
+                        name="eventType"
+                        rules={[
+                          { required: true, message: "Select event type" },
+                        ]}
+                      >
+                        <Select
+                          placeholder="Choose event"
+                          options={eventTypes.map((eventType) => ({
+                            label: eventType,
+                            value: eventType,
+                          }))}
+                        />
+                      </Form.Item>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 gap-x-4">
+                      <Form.Item
+                        label="Event date"
+                        name="eventDate"
+                        rules={[
+                          { required: true, message: "Select event date" },
+                        ]}
+                      >
+                        <DatePicker
+                          className="w-full"
+                          format="DD MMM YYYY"
+                          placeholder="Select date"
+                        />
+                      </Form.Item>
+
+                      <Form.Item label="Expected guests" name="guestCount">
+                        <InputNumber
+                          className="w-full"
+                          min={1}
+                          placeholder="e.g. 150"
+                        />
+                      </Form.Item>
+                    </div>
+
+                    <Form.Item
+                      label="Event location"
+                      name="location"
+                      rules={[
+                        { required: true, message: "Enter event location" },
+                      ]}
+                    >
+                      <Input
+                        prefix={<MapPin size={14} className="text-gray-500" />}
+                        placeholder="Venue, district, or town"
+                      />
+                    </Form.Item>
+
+                    <Form.Item label="Budget range" name="budget">
+                      <Select
+                        placeholder="Select budget range"
+                        options={budgetOptions.map((budget) => ({
+                          label: budget,
+                          value: budget,
+                        }))}
+                      />
+                    </Form.Item>
+
+                    <Form.Item label="Extra notes" name="notes">
+                      <Input.TextArea
+                        rows={3}
+                        placeholder="Tell us about stage size, power access, timing, or special requests..."
+                      />
+                    </Form.Item>
+
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      size="large"
+                      block
+                      className="booking-submit-button"
+                    >
+                      Book Now <ArrowRight size={14} />
+                    </Button>
+                    <a
+                      href={contactDetails.whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 flex items-center justify-center gap-2 text-[#a855f7] text-xs font-semibold hover:text-[#ec4899] transition-colors"
+                    >
+                      Prefer direct WhatsApp? Message us
+                    </a>
+                  </Form>
+                </div>
+              </ConfigProvider>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
-              <h3 className="text-white font-bold text-xl mb-4">
-                Events We Cover
-              </h3>
-              <div className="grid grid-cols-2 gap-2">
-                {eventTypes.map((ev, i) => (
-                  <motion.div
-                    key={ev}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: 0.4 + i * 0.06 }}
-                    className="flex items-center gap-2 bg-white/5 rounded-lg px-3 py-2 text-gray-300 text-xs border border-white/5"
-                  >
-                    <CalendarCheck2 size={12} className="text-[#a855f7]" />
-                    {ev}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 gap-8 items-start">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.7, delay: 0.2 }}
+              >
+                <h3 className="text-white font-bold text-xl mb-5">
+                  Our Equipment Fleet
+                </h3>
+                <div className="grid grid-cols-1 gap-3">
+                  {equipment.map((eq, i) => (
+                    <motion.div
+                      key={eq.name}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: 0.3 + i * 0.1 }}
+                      whileHover={{ x: 4 }}
+                      className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 hover:border-[#a855f7]/40 transition-all"
+                    >
+                      <div className="w-10 h-10 rounded-xl bg-[#a855f7]/20 flex items-center justify-center shrink-0">
+                        <span className="text-[#a855f7]">{eq.icon}</span>
+                      </div>
+                      <div>
+                        <div className="text-white text-sm font-semibold">
+                          {eq.name}
+                        </div>
+                        <div className="text-gray-500 text-xs">{eq.desc}</div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.7, delay: 0.3 }}
+              >
+                <h3 className="text-white font-bold text-xl mb-4">
+                  Events We Cover
+                </h3>
+                <div className="flex flex-wrap gap-2 leading-relaxed">
+                  {eventTypes.map((ev, i) => (
+                    <motion.div
+                      key={ev}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={inView ? { opacity: 1, scale: 1 } : {}}
+                      transition={{ delay: 0.4 + i * 0.06 }}
+                      className="group inline-flex items-center gap-1.5 bg-white/5 rounded-full px-3 py-1.5 text-gray-300 text-xs border border-white/10 transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-orange-400/15 hover:text-orange-100 hover:border-orange-400/40"
+                    >
+                      <Check
+                        size={13}
+                        className="text-orange-400 transition-colors duration-200 group-hover:text-orange-300"
+                      />
+                      {ev}
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>

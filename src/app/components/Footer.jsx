@@ -18,17 +18,13 @@ import { contactDetails } from "../config/site.js";
 const links = {
   Services: [
     { label: "Software Development", to: "/services" },
-    { label: "Sound Systems", to: "/booking" },
-    { label: "Event Management", to: "/booking" },
-    { label: "URA TIN Registration", to: "/online-services" },
-    { label: "Logbook Transfer", to: "/online-services" },
-    { label: "Tax Filing", to: "/online-services" },
-    { label: "URSB Registration", to: "/online-services" },
+    { label: "Sound Systems", to: "/book-sound-system" },
+    { label: "Event Management", to: "/book-sound-system" },
   ],
   Company: [
     { label: "About Us", to: "/about" },
     { label: "Our Team", to: "/team" },
-    { label: "Portfolio", to: "/portfolio" },
+    { label: "Products", to: "/products" },
     { label: "Testimonials", to: "/" },
     { label: "Contact", to: "/contact" },
   ],
@@ -57,7 +53,7 @@ export function Footer() {
         {/* CTA Banner */}
         <div className="bg-gradient-to-r from-[#071921] via-[#294B59]/20 to-[#073042] py-10 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
-            <div>
+            <div className="text-center md:text-left">
               <h3 className="text-white font-black text-2xl mb-1">
                 Ready to Get Started?
               </h3>
@@ -65,7 +61,7 @@ export function Footer() {
                 Contact us today and let's build something amazing together.
               </p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap justify-center md:justify-end gap-3">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
@@ -100,10 +96,10 @@ export function Footer() {
 
         {/* Main Footer */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12 text-center md:text-left">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center justify-center md:justify-start gap-1 mb-4">
                 <img src={bgimaLogo} alt="Bgima Logo" className="w-30 h-20" />
 
                 <div>
@@ -115,26 +111,26 @@ export function Footer() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs">
+              <p className="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs mx-auto md:mx-0">
                 Uganda's premier technology company delivering software
-                development, sound systems, event management, and government
-                online services since 2022.
+                development, software products, sound systems, and event
+                management since 2022.
               </p>
               <div className="space-y-2 mb-6">
-                <div className="flex items-center gap-2 text-gray-400 text-xs">
+                <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400 text-xs">
                   <MapPin size={12} className="text-[#207BA1]" /> Kampala,
                   Uganda, East Africa
                 </div>
-                <div className="flex items-center gap-2 text-gray-400 text-xs">
+                <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400 text-xs">
                   <Phone size={12} className="text-[#207BA1]" /> +256 768 683
                   090
                 </div>
-                <div className="flex items-center gap-2 text-gray-400 text-xs">
+                <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400 text-xs">
                   <Mail size={12} className="text-[#207BA1]" />
                   info@bgimahood.com
                 </div>
               </div>
-              <div className="flex gap-3">
+              <div className="flex justify-center md:justify-start gap-3">
                 {socials.map(({ Icon, href, color }) => (
                   <motion.a
                     key={href + color}
@@ -183,11 +179,11 @@ export function Footer() {
 
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-200 text-xs">
+            <div className="text-gray-200 text-xs text-center sm:text-left">
               © {new Date().getFullYear()} BGIMAHOOD TECHNOLOGIES. All rights
               reserved. | Registered in Uganda, 2022.
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center gap-4">
               <span className="text-gray-200 text-xs">🇺🇬 Made in Uganda</span>
               <motion.button
                 whileHover={{ scale: 1.1, y: -2 }}

@@ -13,10 +13,7 @@ import {
   Mic2,
   PartyPopper,
   CalendarCheck2,
-  FileText,
-  Car,
   Building2,
-  Receipt,
   ShieldCheck,
   Users,
   ArrowRight,
@@ -149,48 +146,6 @@ const serviceCategories = [
       },
     ],
   },
-  {
-    id: "online",
-    icon: <FileText size={28} />,
-    color: "#10b981",
-    bgColor: "from-[#10b981]/20 to-[#06b6d4]/10",
-    title: "Online Government Services",
-    subtitle: "Fast & reliable e-government assistance",
-    image:
-      "https://images.unsplash.com/photo-1544717305-f9c88f2897bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
-    services: [
-      {
-        icon: <FileText size={18} />,
-        name: "URA TIN Registration",
-        desc: "Tax Identification Number creation on URA portal",
-      },
-      {
-        icon: <Car size={18} />,
-        name: "Logbook Transfers",
-        desc: "Vehicle & motorcycle logbook transfer services",
-      },
-      {
-        icon: <Receipt size={18} />,
-        name: "Tax Return Filing",
-        desc: "URA tax returns filing for individuals & businesses",
-      },
-      {
-        icon: <Building2 size={18} />,
-        name: "URSB Registrations",
-        desc: "Company & business registration with URSB",
-      },
-      {
-        icon: <ShieldCheck size={18} />,
-        name: "NIRA Services",
-        desc: "National ID and civil registration assistance",
-      },
-      {
-        icon: <Globe size={18} />,
-        name: "Other Online Services",
-        desc: "NSSF, URA, URSB, and various online activities",
-      },
-    ],
-  },
 ];
 
 export function Services() {
@@ -225,8 +180,8 @@ export function Services() {
             Our Core Services
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            From cutting-edge software to live events and government services —
-            one company, endless solutions.
+            From software products to live events and professional sound — one
+            company, practical solutions.
           </p>
         </motion.div>
 

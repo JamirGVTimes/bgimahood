@@ -14,7 +14,7 @@ const routes = [
     title: "BGIMAHOOD TECHNOLOGIES",
     eyebrow: "SOFTWARE • EVENTS • SOUND",
     description:
-      "All-in-one technology partner for software, events, professional sound, and online services in Uganda.",
+      "All-in-one technology partner for software products, events, and professional sound in Uganda.",
     features: [
       ["SOFTWARE", "Custom systems"],
       ["EVENTS", "Seamless planning"],
@@ -27,7 +27,7 @@ const routes = [
     title: "ABOUT BGIMAHOOD",
     eyebrow: "REGISTERED UGANDA TECHNOLOGY COMPANY",
     description:
-      "A trusted team building digital products, event experiences, and government online service support since 2022.",
+      "A trusted team building digital products, event experiences, and sound systems since 2022.",
     features: [
       ["2022", "Registered company"],
       ["150+", "Happy clients"],
@@ -62,28 +62,15 @@ const routes = [
     accent: "#ff9800",
   },
   {
-    slug: "online-services",
-    title: "ONLINE GOVERNMENT SERVICES",
-    eyebrow: "URA • URSB • NIRA • NSSF",
+    slug: "products",
+    title: "SOFTWARE PRODUCTS",
+    eyebrow: "OPERATIONS • SCHOOLS • PAYMENTS",
     description:
-      "Fast assistance with TIN registration, tax returns, logbook transfers, company registration, and online forms.",
+      "Practical software platforms for business operations, school management, payments, portals, and real-time teams.",
     features: [
-      ["URA", "TIN and returns"],
-      ["URSB", "Business support"],
-      ["NIRA", "ID services"],
-    ],
-    accent: "#10b981",
-  },
-  {
-    slug: "portfolio",
-    title: "PROJECT PORTFOLIO",
-    eyebrow: "WEB APPS • PORTALS • SAAS",
-    description:
-      "Selected technology projects, dashboards, portals, SaaS products, and real-time systems built for East Africa.",
-    features: [
-      ["DASHBOARDS", "Data clarity"],
-      ["PORTALS", "Business workflows"],
-      ["REAL-TIME", "Live systems"],
+      ["OPS", "Workflow control"],
+      ["SCHOOLS", "Management tools"],
+      ["PAYMENTS", "Clean billing"],
     ],
     accent: "#00d4ff",
   },
@@ -105,7 +92,7 @@ const routes = [
     title: "CONTACT BGIMAHOOD",
     eyebrow: "KAMPALA • UGANDA • EAST AFRICA",
     description:
-      "Talk to us for software development, sound system hire, event management, and online service support.",
+      "Talk to us for software development, software products, sound system hire, and event management.",
     features: [
       ["PHONE", "+256 768 683 090"],
       ["EMAIL", "info@bgimahood.com"],

@@ -30,11 +30,11 @@ const team = [
   },
   {
     name: "Samuel Tumusiime",
-    role: "Gov. Services Specialist",
+    role: "Product Support Specialist",
     avatar: "ST",
     color: "#f59e0b",
-    skills: ["URA Portal", "URSB", "NIRA"],
-    bio: "Expert in Uganda government online services with 4+ years helping clients navigate e-government.",
+    skills: ["Client Support", "QA", "Training"],
+    bio: "Product support specialist helping clients onboard, test workflows, and get value from their systems.",
   },
   {
     name: "Ramadhan Kabuleeta",

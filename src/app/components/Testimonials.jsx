@@ -31,8 +31,8 @@ const testimonials = [
     avatar: "JM",
     color: "#10b981",
     rating: 5,
-    text: "I needed my TIN registered and logbook transferred urgently. BGIMAHOOD handled everything within the same day. Affordable, fast, and very reliable service!",
-    service: "URA & URSB Services",
+    text: "BGIMAHOOD configured a simple operations dashboard for our team and trained everyone quickly. We finally have clear visibility on daily work.",
+    service: "Operations Software",
   },
   {
     id: 4,
@@ -61,8 +61,8 @@ const testimonials = [
     avatar: "HN",
     color: "#00d4ff",
     rating: 5,
-    text: "They helped us register 50 employees on the NSSF and URA portals. Fast, accurate, and very affordable. We now use them for all our company compliance needs.",
-    service: "Online Government Services",
+    text: "They rolled out our internal staff portal with clean permissions, document access, and reporting. The support after launch has been excellent.",
+    service: "Client Portal Product",
   },
 ];
 

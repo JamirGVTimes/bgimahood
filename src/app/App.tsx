@@ -24,14 +24,9 @@ const BookingPage = lazy(() =>
     default: module.BookingPage,
   })),
 );
-const OnlineServicesPage = lazy(() =>
-  import("./pages/OnlineServicesPage.jsx").then((module) => ({
-    default: module.OnlineServicesPage,
-  })),
-);
-const PortfolioPage = lazy(() =>
-  import("./pages/PortfolioPage.jsx").then((module) => ({
-    default: module.PortfolioPage,
+const ProductsPage = lazy(() =>
+  import("./pages/ProductsPage.jsx").then((module) => ({
+    default: module.ProductsPage,
   })),
 );
 const TeamPage = lazy(() =>
@@ -66,9 +61,8 @@ function AppRoutes() {
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/services" element={<ServicesPage />} />
-      <Route path="/booking" element={<BookingPage />} />
-      <Route path="/online-services" element={<OnlineServicesPage />} />
-      <Route path="/portfolio" element={<PortfolioPage />} />
+      <Route path="/book-sound-system" element={<BookingPage />} />
+      <Route path="/products" element={<ProductsPage />} />
       <Route path="/team" element={<TeamPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="*" element={<NotFoundPage />} />

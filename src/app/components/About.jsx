@@ -8,7 +8,7 @@ const features = [
   "Expert team of developers & engineers",
   "Affordable pricing with premium quality",
   "24/7 customer support & maintenance",
-  "Government-level online service expertise",
+  "Product-focused software delivery",
   "Trusted by 150+ businesses in Uganda",
 ];
 
@@ -73,7 +73,7 @@ export function About() {
               >
                 <img
                   src="https://images.unsplash.com/photo-1544717305-f9c88f2897bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400"
-                  alt="Online Services"
+                  alt="Software Products"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -118,9 +118,9 @@ export function About() {
               Founded in 2022,{" "}
               <strong className="text-white">BGIMAHOOD TECHNOLOGIES</strong> is
               a registered company based in Uganda that delivers comprehensive
-              technology solutions. From cutting-edge software development to
-              sound system hiring and government online services — we are your
-              trusted all-in-one partner.
+              technology solutions. From cutting-edge software products to
+              sound system hiring and event management — we are your trusted
+              all-in-one partner.
             </p>
             <p className="text-gray-400 leading-relaxed mb-8">
               Our team of passionate professionals combines technical expertise
